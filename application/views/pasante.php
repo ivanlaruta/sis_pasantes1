@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
-<body background="fondo2.jpg" style='background-attachment: fixed;'>
+	 <link href="<?php echo base_url(); ?>bootstrap/css/bootstrap.css" rel="stylesheet">
 	
 <br>
 <div align="center">
@@ -17,7 +20,7 @@
 <table border="0">
 <tr>
 <td>
-<img src="escudo.jpg" width="100" height="120">
+<img src="<?php echo base_url(); ?>images/escudo.jpg" width="100" height="120">
 </td>
 <td>
 <h2><b>Universidad Católica Boliviana "San Pablo"</b></h2>
