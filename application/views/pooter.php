@@ -1,3 +1,5 @@
+
+
 <hr width="100%" size="3px">
 <div align="right">
 	
@@ -17,5 +19,4 @@ email: csinf@ucb.edu.bo
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>bootstrap/js/bootstrap.min.js"></script>
-</body>
 </html>
