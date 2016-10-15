@@ -16,7 +16,7 @@
 <body>
 
 	<div class="row">
-		<div class="col-xs-7 col-sm-9">
+		<div class="col-xs-7 col-sm-8">
 			<div id="myslide" class="carousel slide">
 
 					<ol class="carousel-indicators">
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 
-		<div class="col-xs-8 col-sm-3">
+		<div class="col-xs-8 col-sm-4">
 			<div align="center">
 				<h2>Unidad Académica</h2>
 				<h2>"La Paz"</h2>
