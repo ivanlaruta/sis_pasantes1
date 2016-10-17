@@ -2,12 +2,12 @@
 	 	<div align="center">
 	 		<h2><b>BIENVENIDO: XXXXX YYYYY </b></h2>
 		</div>
-	<form action="<?php echo base_url();?>index.php/registroPersona/guardar" method="POST">
+	<form action="<?php echo base_url();?>index.php/registroPasante/guardar" method="POST">
 		<div align="center">
 			<table border="0">
 				<tr>
 					<td colspan="2">
-						<center><h3>Registro de Usuarios</h3></center>
+						<center><h3>Registro de Pasantes/h3></center>
 					</td>
 				</tr>
 				<tr>
@@ -56,18 +56,10 @@
 				</tr>
 
 				<tr>
-					<td><label>tipo de usaurio</label></td>
-					<td>
-						<center>
-							<select class="form-control" name="id_rol">
-						  		<option>1</option>
-						  		<option>2</option>
-						  		<option>3</option>
-						  		
-							</select>
-						</center>
-					</td>
+					<td><label>carrera</label></td>
+					<td><input type="text" class="form-control" name="cat_carrera"></td>
 				</tr>
+
 				<tr>
 					<td>.</td>							
 				</tr>

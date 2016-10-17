@@ -2,21 +2,23 @@
 /**
 * 
 */
-class RegistroPersona extends CI_Controller
+class RegistroPasante extends CI_Controller
 {
 	function __construct()
 	{
 		parent:: __construct();
-		$this -> load -> model('modeloRegistroPersona');
+		$this -> load -> model('modeloRegistroPasante');
+		$this -> load -> model('registrarPasante');
+		$this -> load->library('encrypt');
 	}
 
 	public function index(){
 		$this->load->view('header');
-		$this -> load-> view ('jefe/registroPersona');
+		$this -> load-> view ('encargado/RegistroPasante');
 		$this->load->view('pooter');
 	}
 	public function guardar(){
-		
+		#persona
 		$param['carnet_identidad'] = $this -> input -> post('carnet_identidad');
 		$param['nombres'] =$this -> input -> post('nombres');
 		$param['apellidos'] =$this -> input -> post('apellidos');
@@ -25,9 +27,19 @@ class RegistroPersona extends CI_Controller
 		$param['email'] =$this -> input -> post('email');
 		$param['fecha_nacimiento'] =$this -> input -> post('fecha_nacimiento');
 		$param['usuario'] =$this -> input -> post('usuario');
-		$param['password'] =$this -> input -> post('password');
-		$param['id_rol'] =$this -> input -> post('id_rol');
 
-		$this->modeloRegistroPersona->guardar($param);
+		#$param['password'] =$this -> encrypt ->encode($this -> input -> post('password'));
+
+		$param['password'] =$this -> input -> post('password');
+		$param['id_rol'] =3;
+		#pasante
+		$paramusu['cat_carrera'] =$this -> input -> post('cat_carrera');
+		
+		$lastId = $this->modeloRegistroPasante->guardar($param);
+		if($lastId > 0){
+			$paramusu['id_persona'] = $lastId;
+			$this -> registrarPasante -> guardar($paramusu);
+		}
+
 	}
 }
