@@ -2,7 +2,7 @@
 /**
 * 
 */
-class RegistrarPasante extends CI_Model
+class RegistrarEncargado extends CI_Model
 {
 	
 	function __construct()
@@ -13,12 +13,12 @@ class RegistrarPasante extends CI_Model
 	public function guardar($param)
 	{
 		$campos = array(
-			'cat_carrera' =>$param['cat_carrera'] ,
+			'titulo' =>$param['titulo'] ,
+			'cat_turno' =>$param['cat_turno'] ,
 			'id_persona' =>$param['id_persona'] 
 			);
-		$this ->db->insert('pasante',$campos);
+		$this ->db->insert('encargado',$campos);
 	}
 }
-
 ?>
 	

@@ -23,7 +23,9 @@ class ModeloRegistroPersona extends CI_Model
 			'password' =>$param['password'] ,
 			'id_rol' =>$param['id_rol'] 
 			);
+		
 		$this ->db->insert('persona',$campos);
+		return $this ->db -> insert_id();
 	}
 }
 
