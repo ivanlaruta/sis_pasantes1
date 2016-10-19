@@ -11,6 +11,6 @@ class Pasante extends CI_Controller {
 	{
 		$this->load->view('header');
 		$this->load->view('pasante/pasante');
-		$this->load->view('pooter');
+		$this->load->view('footer');
 	}
 }

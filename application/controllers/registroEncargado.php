@@ -15,7 +15,7 @@ class RegistroEncargado extends CI_Controller
 	public function index(){
 		$this->load->view('header');
 		$this -> load-> view ('jefe/RegistroEncargado');
-		$this->load->view('pooter');
+		$this->load->view('footer');
 	}
 
 	public function guardar(){
@@ -31,13 +31,10 @@ class RegistroEncargado extends CI_Controller
 		#$param['password'] =$this -> encrypt ->encode($this -> input -> post('password'));
 		$param['password'] =$this -> input -> post('password');
 		$param['id_rol'] =2;
-
 		#encargado
 		$paramenc['titulo'] =$this -> input -> post('titulo');
-		$paramenc['cat_turno'] =$this -> input -> post('cat_turno');
-		
+		$paramenc['cat_turno'] =$this -> input -> post('cat_turno');	
 		$lastId = $this->modeloRegistroPersona->guardar($param);
-
 		if($lastId > 0){
 			$paramenc['id_persona'] = $lastId;
 			$this -> registrarEncargado -> guardar($paramenc);

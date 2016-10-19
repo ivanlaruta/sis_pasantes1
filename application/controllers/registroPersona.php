@@ -13,7 +13,7 @@ class RegistroPersona extends CI_Controller
 	public function index(){
 		$this->load->view('header');
 		$this -> load-> view ('jefe/registroPersona');
-		$this->load->view('pooter');
+		$this->load->view('footer');
 	}
 	public function guardar(){
 		

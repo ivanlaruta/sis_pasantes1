@@ -15,7 +15,7 @@ class RegistroPasante extends CI_Controller
 	public function index(){
 		$this->load->view('header');
 		$this -> load-> view ('encargado/RegistroPasante');
-		$this->load->view('pooter');
+		$this->load->view('footer');
 	}
 	public function guardar(){
 		#persona
