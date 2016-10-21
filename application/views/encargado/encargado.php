@@ -3,7 +3,7 @@
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>
 
  <div align="center">
- <h2><b>BIENVENIDO: Carlitos</b></h2>
+ <h2><b>BIENVENIDO: <?php echo $this->session->userdata('s_usuario');?></b></h2>
 
 </div>
 
