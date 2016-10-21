@@ -37,7 +37,7 @@
 </tr>
 <tr>
 <td height="60">
-	<a href="" class="btn btn-primary" style='width:150px'>Datos Personales</a>
+	<a href="datospersonales.php"  class="btn btn-primary" style='width:150px'>Datos Personales</a>
 </td>
 
 <td>
