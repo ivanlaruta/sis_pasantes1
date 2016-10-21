@@ -19,7 +19,7 @@
 
 <tr>
 <td height="60">
-	<a href="" class="btn btn-primary" style='width:170px'>Control de Pasantes</a>
+	<a href="<?php echo base_url();?>index.php/controlPasantes" class="btn btn-primary" class="btn btn-primary" style='width:170px'>Control de Pasantes</a>
 </td>
 
 <td>
