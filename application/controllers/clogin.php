@@ -26,7 +26,10 @@ class Clogin extends CI_Controller
 		$res = $this->mlogin->ingresar($usu,$pass);  
 
 		if ($res == 1) {
-			$this->load->view('encargado');
+
+			$this->load->view('header');
+			$this->load->view('encargado/encargado');
+			$this->load->view('footer');
 		}
 		else
 		{

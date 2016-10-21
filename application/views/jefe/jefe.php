@@ -19,6 +19,16 @@
 
 <tr>
 <td height="60">
+	<a href="<?php echo base_url();?>index.php/registroEncargado" class="btn btn-primary" style='width:170px'>Registro Encargados</a>
+</td>
+
+<td>
+	&nbsp;Registro de datos de encargado
+</td>
+</tr>
+
+<tr>
+<td height="60">
 	<a href="" class="btn btn-primary" style='width:170px'>Listado de Pasantes</a>
 </td>
 
