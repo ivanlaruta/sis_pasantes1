@@ -14,22 +14,27 @@ class login_model extends CI_Model
 
 	public function login ($usuario,$password)
 	{
-		$this->db->where('usuario', $usuario);
-		$this->db->where('password', $password);		
+		$this->db->select('p.id_persona, p.nombres, p.apellidos, r.rol');
+		$this->db->from('persona p');
+		$this->db->join('rol r','p.id_rol = r.id_rol');
+		
+		$this->db->where('p.usuario', $usuario);
+		$this->db->where('p.password', $password);		
 
 
-		$resultados = $this->db->get('persona');
-		if ($resultados->num_rows()>0) {
-			return $resultados -> row(); 
+		$resultados = $this->db->get();
+		if ($resultados->num_rows()==1) {
+			$r = $resultados -> row(); 
 
 			$nombre = array(
 				'idusuario' => $r->id_persona,
-				'nombre' => $r->nombres.",".$r->apellidos
+				'nombrerol' => $r->nombres." ".$r->apellidos.','.$r->rol
 				);
 			$this->session->set_userdata($nombre);
 			return TRUE;
 		} else {
-			return FALSE;
+			$this->session->set_flashdata('usuario_incorrecto','Los datos introducidos son incorrectos');
+			redirect(base_url().'index.php/Principal','refresh');
 		}
 		
 	}
