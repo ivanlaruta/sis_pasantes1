@@ -1,59 +1,60 @@
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>	
 
  <div align="center">
- <h2><b>BIENVENIDO: Juan Perez</b></h2>
+ <h2><b>BIENVENIDO: <?php echo $this->session->userdata('nombrerol');?></b></h2>
 
 </div>
 
 
-<div align="center">
-<table border="0">
-<tr>
-<td colspan="2">
-<center><h3>Menú Principal</h3></center>
-</td>
+	<div align="center">
+		<table border="0">
+			<tr>
+				<td colspan="2">
+					<center><h3>Menú Principal</h3></center>
+				</td>
 
-</tr>
+			</tr>
 
-<tr>
-<td height="60">
-	<a href="" class="btn btn-primary" style='width:150px'>Registrar Tareas</a>
-</td>
+			<tr>
+				<td height="60">
+					<a href="" class="btn btn-primary" style='width:150px'>Registrar Tareas</a>
+				</td>
 
-<td>
-	Registrar Tareas Realizadas
-</td>
-</tr>
-<tr>	
-<td height="60">
-	<a href="" class="btn btn-primary" style='width:150px'>Horarios</a>
-	<br>
-</td>
+				<td>
+					Registrar Tareas Realizadas
+				</td>
+			</tr>
 
-<td>
+			<tr>	
+				<td height="60">
+					<a href="" class="btn btn-primary" style='width:150px'>Horarios</a>
+					<br>
+				</td>
 
-	Verificar Horarios
-</td>
-</tr>
-<tr>
-<td height="60">
-	<a href="datospersonales.php"  class="btn btn-primary" style='width:150px'>Datos Personales</a>
-</td>
+				<td>
+					Verificar Horarios
+				</td>
+			</tr>
 
-<td>
-	Revisión de Datos Personales 
-</td>
-</tr>
-<tr>
-<td height="60">
-	<a href="" class="btn btn-primary" style='width:150px'>Solicitudes</a>
-</td>
+			<tr>
+				<td height="60">
+					<a href="datospersonales.php"  class="btn btn-primary" style='width:150px'>Datos Personales</a>
+				</td>
 
-<td>
-	Enviar Solicitudes Especiales o de Permiso
-</td>
+				<td>
+					Revisión de Datos Personales 
+				</td>
+			</tr>
 
-</tr>
-</table>
-</div>
+			<tr>
+				<td height="60">
+					<a href="" class="btn btn-primary" style='width:150px'>Solicitudes</a>
+				</td>
+
+				<td>
+					Enviar Solicitudes Especiales o de Permiso
+				</td>
+			</tr>
+		</table>
+	</div>
 </body>
