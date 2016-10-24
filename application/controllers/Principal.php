@@ -11,6 +11,7 @@ class Principal extends CI_Controller {
 
 	public function index()
 	{
+
 		$usuario = $this->input->post('usuario');
 		$password = $this->input->post('password');
 
@@ -25,7 +26,12 @@ class Principal extends CI_Controller {
 				$this->session->set_userdata('usuario', $_POST['usuario']);
 			redirect('Encargado');
 			}else{
-				redirect('welcome');
+
+				//redirect('welcome');
+				echo "<script type='text/javascript'>
+				alert('Usuario o Contraseña Incorrectos, Intente Nuevamente');
+
+				</script>";
 			}
 		}		
 		$this->load->view('principal.php');
