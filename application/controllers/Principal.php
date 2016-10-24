@@ -29,7 +29,7 @@ class Principal extends CI_Controller {
 
 				//redirect('welcome');
 				echo "<script type='text/javascript'>
-				alert('Usuario o Contraseña Incorrectos, Intente Nuevamente');
+				alert('Datos incorrectos, intente de nuevo');
 
 				</script>";
 			}
