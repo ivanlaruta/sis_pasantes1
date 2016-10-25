@@ -1,11 +1,13 @@
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>	
-	 	
-	<form action="<?php echo base_url();?>index.php/registroEncargado/guardar" method="POST">
+	 	<div align="center">
+	 		<h2><b>BIENVENIDO: XXXXX YYYYY </b></h2>
+		</div>
+	<form action="<?php echo base_url();?>index.php/controlModificarPasante" method="POST">
 		<div align="center">
 			<table border="0">
 				<tr>
 					<td colspan="2">
-						<center><h3>Registro de Encargado</h3></center>
+						<center><h3>Modificar datos de Pasante</h3></center>
 					</td>
 				</tr>
 				<tr>
@@ -54,19 +56,15 @@
 				</tr>
 
 				<tr>
-					<td><label>Titulo</label></td>
-					<td><input type="text" class="form-control" name="titulo"></td>
-				</tr>
-				<tr>
-					<td><label>Turno</label></td>
-					<td><input type="text" class="form-control" name="cat_turno"></td>
+					<td><label>carrera</label></td>
+					<td><input type="text" class="form-control" name="cat_carrera"></td>
 				</tr>
 
 				<tr>
 					<td>.</td>							
 				</tr>
 				<tr>
-					<td><input type="submit" value="Guardar" class="btn btn-primary" ></td>
+					<td><input type="submit" value="Modificar" class="btn btn-primary" ></td>
 					<td><input type="submit" value="Cancelar" class="btn btn-primary"></td>
 										
 				</tr>
