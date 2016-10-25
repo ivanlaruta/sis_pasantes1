@@ -1,7 +1,5 @@
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>	
-	 	<div align="center">
-	 		<h2><b>BIENVENIDO: XXXXX YYYYY </b></h2>
-		</div>
+	 	
 	<form action="<?php echo base_url();?>index.php/registroPersona/guardar" method="POST">
 		<div align="center">
 			<table border="0">

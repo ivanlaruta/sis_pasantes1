@@ -44,4 +44,9 @@
 
  </div>
  </div>
+
+<div align="center">
+ 	<h2>Bienvenido: <?php echo $this->session->userdata('nombrerol');?></h2>
+</div>
+
 </head>

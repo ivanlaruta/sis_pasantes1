@@ -1,9 +1,7 @@
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>    
 
 
- <div align="center">
- <h2><b>BIENVENIDO: Mauricio Fernandez</b></h2>
-</div>
+
 
 
 
