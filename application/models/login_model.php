@@ -33,8 +33,9 @@ class login_model extends CI_Model
 			$this->session->set_userdata($nombre);
 			return TRUE;
 		} else {
-			$this->session->set_flashdata('usuario_incorrecto','Los datos introducidos son incorrectos');
-			redirect(base_url().'index.php/Principal','refresh');
+			//$this->session->set_flashdata('usuario_incorrecto','Los datos introducidos son incorrectos');
+			//redirect(base_url().'index.php/Principal','refresh');
+			return false;
 		}
 		
 	}

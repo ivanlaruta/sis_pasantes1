@@ -30,7 +30,6 @@ class Principal extends CI_Controller {
 				//redirect('welcome');
 				echo "<script type='text/javascript'>
 				alert('Datos incorrectos, intente de nuevo');
-
 				</script>";
 			}
 		}		
