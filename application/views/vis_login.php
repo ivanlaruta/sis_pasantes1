@@ -11,19 +11,19 @@
 
 				<div class="carousel-inner">
 					<div class="item active">
-						<img src="<?php echo base_url(); ?>img/ucb.jpg" width="1000" height="1000">
+						<img src="<?php echo base_url(); ?>images/ucb.jpg" width="1000" height="1000">
 					</div>
 
 					<div class="item">
-						<img src="<?php echo base_url(); ?>img/1.jpg" width="1000" height="1000">
+						<img src="<?php echo base_url(); ?>images/1.jpg" width="1000" height="1000">
 					</div>
 
 					<div class="item">
-						<img src="<?php echo base_url(); ?>img/3.jpg" width="1000" height="1000">
+						<img src="<?php echo base_url(); ?>images/3.jpg" width="1000" height="1000">
 					</div>
 
 					<div class="item">
-						<img src="<?php echo base_url(); ?>img/4.jpg" width="1000" height="1000">
+						<img src="<?php echo base_url(); ?>images/4.jpg" width="1000" height="1000">
 					</div>
 
 				</div>
