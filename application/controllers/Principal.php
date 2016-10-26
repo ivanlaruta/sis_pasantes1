@@ -16,7 +16,23 @@ class Principal extends CI_Controller {
 		$password = $this->input->post('password');
 
 		if ($this->session->userdata('usuario')) {
-			redirect('Encargado');
+			//redirect('Encargado');
+			$idrol=$this->session->userdata('id_rol');
+				if($idrol==3)
+				{
+					$this->session->set_userdata('usuario', $_POST['usuario']);
+					redirect('Pasante');
+				}
+				if($idrol==2)
+				{
+					$this->session->set_userdata('usuario', $_POST['usuario']);
+					redirect('Encargado');
+				}
+				if($idrol==1)
+				{
+					$this->session->set_userdata('usuario', $_POST['usuario']);
+					redirect('jefe');
+				}
 		}
 
 		if (isset($_POST['password'])) {
@@ -49,7 +65,7 @@ class Principal extends CI_Controller {
 				</script>";
 			}
 		}		
-		$this->load->view('principal.php');
+		$this->load->view('Principal.php');
 
 	} 
 
