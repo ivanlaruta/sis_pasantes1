@@ -22,11 +22,27 @@ class Principal extends CI_Controller {
 		if (isset($_POST['password'])) {
 			
 		$this->load->model('login_model');
-			if($this->login_model->login($_POST['usuario'],$_POST['password'])){
-				$this->session->set_userdata('usuario', $_POST['usuario']);
-			redirect('Encargado');
-			}else{
-
+			if($this->login_model->login($_POST['usuario'],$_POST['password']))
+			{	
+				$idrol=$this->session->userdata('id_rol');
+				if($idrol==3)
+				{
+					$this->session->set_userdata('usuario', $_POST['usuario']);
+					redirect('Pasante');
+				}
+				if($idrol==2)
+				{
+					$this->session->set_userdata('usuario', $_POST['usuario']);
+					redirect('Encargado');
+				}
+				if($idrol==1)
+				{
+					$this->session->set_userdata('usuario', $_POST['usuario']);
+					redirect('jefe');
+				}
+			}
+			else
+			{
 				//redirect('welcome');
 				echo "<script type='text/javascript'>
 				alert('Datos incorrectos, intente de nuevo');
