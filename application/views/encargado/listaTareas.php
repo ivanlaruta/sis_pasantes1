@@ -19,8 +19,7 @@
               </tr>
             </thead>
 
-            <tbody>
-              <td>1</td>        
+            <tbody>       
                 <td>1</td>
                 <td>Ivan Laruta</td>
                 <td>Instalar una computadora en el bloque S</td>
