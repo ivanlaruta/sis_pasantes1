@@ -2,7 +2,7 @@
 	 	<div align="center">
 	 		<h2><b>BIENVENIDO: <?php echo $this->session->userdata('nombrerol');?> </b></h2>
 		</div>
-	<form action="<?php echo base_url();?>index.php/controlHorarioPasante" method="POST">
+	<form action="<?php echo base_url();?>index.php/controlAsignacionHorario" method="POST">
 		<div align="center">
 			<table border="0">
 				<tr>
@@ -10,7 +10,10 @@
 						<center><h3>Asignacion de horarios</h3></center>
 					</td>
 				</tr>
+			</table>				
+		</div>
 
+			<div align="center">
 				<div class="container">
 				  <table class="table table-bordered">
 				    <thead>
@@ -26,95 +29,90 @@
 
 				    <tbody>
 				      	<td>8:30-9:30</td>        
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>				      	
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>				      	
 				    </tbody>
 
 				    <tbody>
 				      	<td>8:30-9:30</td>        
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>				      
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>			      
 				    </tbody>
 
 				    <tbody>
 				      	<td>9:30-10:30</td>        
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>				      	
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>				      	
 				    </tbody>
 
 				    <tbody>
 				      	<td>10:30-11:30</td>        
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>				      	
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>		      	
 				    </tbody>
 
 				    <tbody>
 				      	<td>11:30-12:30</td>        
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>				     
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>			     
 				    </tbody>
 
 				    <tbody>
 				      	<td>16:30-17:30</td>        
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>				     
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>			     
 				    </tbody>
 
 				    <tbody>
 				      	<td>17:30-18:30</td>        
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>				      
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>			      
 				    </tbody>
 
 				    <tbody>
-				      	<td>18:30-19:30</td>        
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>				     
+				      	<td>18:30-19:30</td>          
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>	     
 				    </tbody>
 
 				    <tbody>
-				      	<td>19:30-20:30</td>        
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>
-				      	<td><input type="checkbox" name="tema[]" value=""></td>				      
-				    </tbody>
-
+				      	<td>19:30-20:30</td>              
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>
+				      	<td><input type="checkbox" name="" value=""></td>			      
+				    </tbody>			
 				    
 				  </table>
+				  
 				</div>
-
-			</table>
-				<tr>
-					<td><input type="submit" value="Guardar" class="btn btn-primary" ></td>
-					<td><input type="submit" value="Cancelar" class="btn btn-primary"></td>
-										
-				</tr>
-		</div>
+				<input type="submit" value="Aceptar" class="btn btn-primary" >
+				<input type="submit" value="Cancelar" class="btn btn-primary">
+			</div>
 	</form>
 </body>

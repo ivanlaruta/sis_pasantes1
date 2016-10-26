@@ -19,11 +19,11 @@
 				<td>&nbsp;Registro de pasante</td>
 			</tr>
 			<tr>
-				<td height="60"><a href="" class="btn btn-primary" style='width:170px'>Modificaciones</a></td>
+				<td height="60"><a href="<?php echo base_url();?>index.php/controlModificarPasante" class="btn btn-primary" style='width:170px'>Modificaciones</a></td>
 				<td>&nbsp;Modificar datos de pasante</td>
 			</tr>
 			<tr>
-				<td height="60"><a href="" class="btn btn-primary" style='width:170px'>Borrar</a></td>
+				<td height="60"><a href="<?php echo base_url();?>index.php/controlEliminarPasante" class="btn btn-primary" style='width:170px'>Borrar</a></td>
 				<td>&nbsp;Eliminar pasante</td>
 			</tr>
 			<tr>
@@ -31,7 +31,7 @@
 				<td>&nbsp;Registrar tareas  y asignarlas a pasantes</td>
 			</tr>
 			<tr>
-				<td height="60"><a href="" class="btn btn-primary" style='width:170px'>Registro de horarios</a></td>
+				<td height="60"><a href="<?php echo base_url();?>index.php/controlAsignacionHorario" class="btn btn-primary" style='width:170px'>Registro de horarios</a></td>
 				<td>	
 					&nbsp;Asignacion de horarios</td>
 			</tr>
