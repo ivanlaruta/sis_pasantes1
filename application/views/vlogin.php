@@ -18,6 +18,8 @@
 					<ol class="carousel-indicators">
 						<li data-target="myslide" data-slide-to="1" class="active"></li>
 						<li data-target="myslide" data-slide-to="2"></li>
+						<li data-target="myslide" data-slide-to="3"></li>
+						<li data-target="myslide" data-slide-to="4"></li>
 					</ol>
 
 				<div class="carousel-inner">
@@ -27,6 +29,14 @@
 
 					<div class="item">
 						<img src="1.jpg" width="1000" height="1000">
+					</div>
+
+					<div class="item">
+						<img src="<?php echo base_url(); ?>images/3.jpg" width="1000" height="1000">
+					</div>
+
+					<div class="item">
+						<img src="<?php echo base_url(); ?>images/4.jpg" width="1000" height="1000">
 					</div>
 				</div>
 				<a href="#myslide" data-slide="prev" class="carousel-control left">&lsaquo;</a>
