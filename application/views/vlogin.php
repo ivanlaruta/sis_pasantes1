@@ -38,6 +38,7 @@
 					<div class="item">
 						<img src="<?php echo base_url(); ?>images/4.jpg" width="1000" height="1000">
 					</div>
+					
 				</div>
 				<a href="#myslide" data-slide="prev" class="carousel-control left">&lsaquo;</a>
 				<a href="#myslide" data-slide="next" class="carousel-control right">&rsaquo;</a>
