@@ -50,7 +50,7 @@
 					<table border="0">
 					<tr>
 					<td width="60" height="60">
-						<label>C.I.</label>
+						<label>Usuario</label>
 					</td>
 					<td >
 						<input id="usuario" name="usuario" type="text" class="form-control" placeholder="Carnet de Identidad">
