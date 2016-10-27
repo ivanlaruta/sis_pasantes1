@@ -1,10 +1,8 @@
-
-
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>
 
 <div align="center">
 <br>
- 	<h4>Seleccione a los Pasantes que seran asiganados a la tarea:</h4>
+ 	<h4>Seleccione a los Pasantes que seran asignados a la tarea:</h4>
  	<br>
 
 </div>
