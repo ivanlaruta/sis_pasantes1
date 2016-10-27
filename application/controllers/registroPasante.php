@@ -37,7 +37,16 @@ class RegistroPasante extends CI_Controller
 		if($lastId > 0){
 			$paramusu['id_persona'] = $lastId;
 			$this -> registrarPasante -> guardar($paramusu);
+				echo "<script type='text/javascript'>
+				alert('guardado correcto');
+				</script>";
+
+						$this->load->view('header');
+						$this -> load-> view ('encargado/controlPasantes');
+						$this->load->view('footer');
 		}
+
+
 
 	}
 }

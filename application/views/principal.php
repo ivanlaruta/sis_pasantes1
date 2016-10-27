@@ -16,7 +16,7 @@
 <body>
 
 	<div class="row">
-		<div class="col-xs-7 col-sm-9">
+		<div class="col-xs-7 col-sm-8">
 			<div id="myslide" class="carousel slide">
 
 					<ol class="carousel-indicators">

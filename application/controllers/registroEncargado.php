@@ -38,6 +38,14 @@ class RegistroEncargado extends CI_Controller
 		if($lastId > 0){
 			$paramenc['id_persona'] = $lastId;
 			$this -> registrarEncargado -> guardar($paramenc);
+
+			echo "<script type='text/javascript'>
+				alert('guardado correcto');
+				</script>";
+
+						$this->load->view('header');
+						$this -> load-> view ('jefe/jefe');
+						$this->load->view('footer');
 		}
 
 	}

@@ -2,11 +2,10 @@
 
 <div align="center">
 <br>
- 	<h4>Seleccione a los Pasantes que seran asignados a la tarea:</h4>
+ 	<h4>lista pasantes:</h4>
  	<br>
 
 </div>
-
 
 
 <div align="center">
@@ -16,7 +15,6 @@
 					<th>Nombres</th>
 					<th>Apelidos</th>
 					<th>Carrera</th>
-					<th>Asignar Tarea</th>
 				</thead>
 
 				<tbody>
@@ -31,7 +29,7 @@
 							<td><?php echo $up -> nombres ?></td>
 							<td><?php echo $up -> apellidos ?></td>
 							<td><?php echo $up -> cat_carrera ?></td>
-							<td height="60"><a href="" class="btn btn-primary" style='width:110px'>Asignar</a>
+							
 					<br>
 				</td>
 						</tr>
@@ -47,6 +45,6 @@
 </div>
 
 <div align="center">
-	<a href="" class="btn btn-primary" style='width:160px'>FInalizar</a>&nbsp;<a href="" class="btn btn-primary" style='width:160px'>Cancelar</a>
+	<a href="<?php echo base_url();?>index.php/Jefe" class="btn btn-primary" style='width:160px'>aceptar</a>
 </div>
 </body>
