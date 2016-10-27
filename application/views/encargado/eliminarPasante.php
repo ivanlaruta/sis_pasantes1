@@ -1,7 +1,4 @@
-<body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>	
-	 	<div align="center">
-	 		<h2><b>BIENVENIDO: <?php echo $this->session->userdata('nombrerol');?> </b></h2>
-		</div>
+<body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>		 	
 	<form action="<?php echo base_url();?>index.php/controlEliminarPasante" method="POST">
 		<div align="center">
 			<table border="0">
@@ -10,6 +7,8 @@
 						<center><h3>Eliminar un pasante de la lista</h3></center>
 					</td>
 				</tr>
+				</table>
+				</div>
 
 				<div class="container">
 				  <table class="table table-bordered">
@@ -29,7 +28,5 @@
 
 				  </table>
 				</div>
-			</table>
-		</div>
 	</form>
 </body>
