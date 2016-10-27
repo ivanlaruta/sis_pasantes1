@@ -5,9 +5,24 @@
 			<table border="0">
 				<tr>
 					<td colspan="2">
-						<center><h3>Registro de Pasantes</h3></center>
+						<center><h3>Registro de Tarea</h3></center>
 					</td>
 				</tr>
+				<tr>
+					<td colspan="2">
+						<center><h3>Porfavor ingrese la descripcion de la tarea nueva y pulse siguiente para asignarla a pasantes.</h3></center>
+					</td>
+				</tr>
+
+				<tr>	
+					<td><p><label>Descrpcion:</label></p></td><br>
+					<td><p><input type="textarea" class="form-control" name = "actividad" placeholder=" Describa la tarea" style="height: 450px;width: 500px"></textarea></p></td>
+				
+				</tr>
+
+
+
+
 				<tr>
 					<td><label>C.I.</label></td>
 					<td><input type="text" class="form-control" name="carnet_identidad" maxlength="8"></td>
