@@ -18,6 +18,14 @@
 				</td>
 				<td>&nbsp;Registro de pasante</td>
 			</tr>
+
+			<tr>
+				<td height="60">
+					<a href="<?php echo base_url(); ?>index.php/ListaAsignarTareaPasantes" class="btn btn-primary" style='width:170px'>listar</a>
+				</td>
+				<td>&nbsp;lista de pasante</td>
+			</tr>
+
 			<tr>
 				<td height="60"><a href="<?php echo base_url();?>index.php/controlModificarPasante" class="btn btn-primary" style='width:170px'>Modificaciones</a></td>
 				<td>&nbsp;Modificar datos de pasante</td>

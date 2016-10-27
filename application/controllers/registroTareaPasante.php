@@ -32,6 +32,14 @@ class RegistroTareaPasante extends CI_Controller
 
 		$lastId = $this->mTarea->guardar($param);
 
+		echo "<script type='text/javascript'>
+				alert('guardado correcto');
+				</script>";
+
+						$this->load->view('header');
+						$this -> load-> view ('encargado/controlPasantes');
+						$this->load->view('footer');
+
 
 	}
 }
