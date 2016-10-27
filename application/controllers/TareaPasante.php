@@ -1,7 +1,7 @@
 <?php
 
 
-class Jefe extends CI_Controller {
+class TareaPasante extends CI_Controller {
 
 	function __construct()
 	{
@@ -9,9 +9,8 @@ class Jefe extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('headerPrincipal');
-		$this->load->view('jefe/jefe');
+		$this->load->view('header');
+		$this->load->view('pasante/tareapasante');
 		$this->load->view('footer');
 	}
-		
 }

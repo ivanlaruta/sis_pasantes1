@@ -50,7 +50,7 @@
 
 				<tr>
 					<td><label>password</label></td>
-					<td><input type="text" class="form-control" name="password"></td>
+					<td><input type="password" class="form-control" name="password"></td>
 				</tr>
 
 				<tr>

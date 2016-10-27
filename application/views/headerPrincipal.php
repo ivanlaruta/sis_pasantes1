@@ -38,8 +38,7 @@
 			<a href="" class="btn btn-default" style='width:160px'>La Paz</a>
 			<a href="" class="btn btn-default" style='width:160px'>Sistema Académico</a>
 			<a href="" class="btn btn-default" style='width:160px'>UCB Mail</a>
-			<a href="javascript:window.history.back();" class="btn btn-default" style='width:160px'>Volver atrás</a>	
-
+			<a href="<?=site_url('Principal/logout')?>" class="btn btn-default" style='width:160px'>Cerrar Sesion</a> 	
 
 		 </div>
 	 </div>
@@ -47,6 +46,6 @@
 	<div align="center">
 	 	<h2>Bienvenido: <?php echo $this->session->userdata('nombrerol');?></h2>
 	</div>
-
+	
 
 </head>
