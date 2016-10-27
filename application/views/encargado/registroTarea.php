@@ -1,87 +1,59 @@
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>	
 	 	
-	<form action="<?php echo base_url();?>index.php/registroPasante/guardar" method="POST">
+	<form action="<?php echo base_url();?>index.php/RegistroTareaPasante/guardar" method="POST">
 		<div align="center">
 			<table border="0">
 				<tr>
 					<td colspan="2">
-						<center><h3>Registro de Tarea</h3></center>
+						<center><h4>Registro de Tarea</h4></center>
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2">
-						<center><h3>Porfavor ingrese la descripcion de la tarea nueva y pulse siguiente para asignarla a pasantes.</h3></center>
+						<center><h5>Porfavor ingrese la descripcion de la tarea nueva y asignela a un pasantes.</h5></center>
 					</td>
 				</tr>
 
 				<tr>	
 					<td><p><label>Descrpcion:</label></p></td><br>
-					<td><p><input type="textarea" class="form-control" name = "actividad" placeholder=" Describa la tarea" style="height: 450px;width: 500px"></textarea></p></td>
+					<td><p><input type="textarea" class="form-control" name = "actividad" placeholder=" Describa la tarea" style="height: 150px;width: 500px"></textarea></p></td>
 				
 				</tr>
-
-
-
-
-				<tr>
-					<td><label>C.I.</label></td>
-					<td><input type="text" class="form-control" name="carnet_identidad" maxlength="8"></td>
-				</tr>
-				
-				<tr>
-					<td><label>Nombres</label></td>
-					<td><input type="text" class="form-control" name="nombres"></td>
-				</tr>
-				
-				<tr>
-					<td><label>Apellidos</label></td>
-					<td><input type="text" class="form-control" name="apellidos"></td>
-				</tr>
-
-				<tr>
-					<td><label>Direccion</label></td>
-					<td><input type="text" class="form-control" name="direccion"></td>
-				</tr>
-
-				<tr>
-					<td><label>Telefono</label></td>
-					<td><input type="text" class="form-control" name="telefono"></td>
-				</tr>
-
-				<tr>
-					<td><label>Correo</label></td>
-					<td><input type="text" class="form-control" name="email"></td>
-				</tr>
-
-				<tr>
-					<td><label>fecha de nacimiento</label></td>
-					<td><input type="date" class="form-control" name="fecha_nacimiento"></td>
-				</tr>
-
-				<tr>
-					<td><label>Usuario</label></td>
-					<td><input type="text" class="form-control" name="usuario"></td>
-				</tr>
-
-				<tr>
-					<td><label>password</label></td>
-					<td><input type="text" class="form-control" name="password"></td>
-				</tr>
-
-				<tr>
-					<td><label>carrera</label></td>
-					<td><input type="text" class="form-control" name="cat_carrera"></td>
-				</tr>
-
+					
+							
+					
 				<tr>
 					<td>.</td>							
 				</tr>
-				<tr>
-					<td><input type="submit" value="Guardar" class="btn btn-primary" style='width:120px'></td>
-					<td><a href="<?php echo base_url();?>index.php/ControlPasantes" class="btn btn-primary"  style='width:120px'>Cancelar</a></td>
-										
-				</tr>
 			</table>
 		</div>
+		<div align="center">
+				<label for="type"> pasante: </label>
+                     <select name="type">
+                                <?php 
+                                    /*
+                                     * Listar todos 
+                                     */
+                                    foreach ($resultado as $row) {
+                                        
+                                            ?>
+                                            <option  value=<?php echo $row->nombres;?> >
+                                            	<?php echo $row->nombres;?>
+                                                <?php echo $row->apellidos;?>
+                                            </option>
+                                            <?php
+                                       
+                                    }
+                                ?>
+                                </select>
+		</div>
+
+
+		<div align="center">
+					<input type="submit" value="Guardar" class="btn btn-primary" style='width:120px'>
+					<a href="<?php echo base_url();?>index.php/ControlPasantes" class="btn btn-primary"  style='width:120px'>Cancelar</a>
+		</div>							
+		
+		
 	</form>
 </body>

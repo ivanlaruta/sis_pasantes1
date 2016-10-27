@@ -2,13 +2,14 @@
 /**
 * 
 */
-class RegistroTareaEncargado extends CI_Controller
+class RegistroTareaPasante extends CI_Controller
 {
 	function __construct()
 	{
 		parent:: __construct();
 
 		$this -> load -> model('mTarea');
+		$this -> load -> model('mPasante');
 		//$this -> load -> model('registrarPasante');
 		$this -> load->library('encrypt');
 	
@@ -16,8 +17,11 @@ class RegistroTareaEncargado extends CI_Controller
 	}
 
 	public function index(){
+
+	$datos['resultado'] = $this->mPasante->listarPasantes2();
+    
 		$this->load->view('header');
-		$this -> load-> view ('encargado/RegistroTarea');
+		$this -> load-> view ('encargado/RegistroTarea', $datos);
 		$this->load->view('footer');
 	}
 
@@ -27,15 +31,7 @@ class RegistroTareaEncargado extends CI_Controller
 		$param['actividad'] = $this -> input -> post('actividad');
 
 		$lastId = $this->mTarea->guardar($param);
-		
-		
-		$this ->load->model('mPasante');
-		$data = array();
-		$data["listarPasantes"] = $this -> mPasante -> listarPasantes();
 
-		$this->load->view('header');
-		$this->load->view('encargado/AsignarTareaPasantes',$data,FALSE);
-		$this->load->view('footer');
 
 	}
 }

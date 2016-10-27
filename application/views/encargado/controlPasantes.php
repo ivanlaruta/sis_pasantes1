@@ -27,7 +27,7 @@
 				<td>&nbsp;Eliminar pasante</td>
 			</tr>
 			<tr>
-				<td height="60"><a href="<?php echo base_url();?>index.php/controlListaTarea" class="btn btn-primary" style='width:170px'>Registro de Tareas </a> </td> 
+				<td height="60"><a href="<?php echo base_url();?>index.php/RegistroTareaPasante" class="btn btn-primary" style='width:170px'>Registro de Tareas </a> </td> 
 				<td>&nbsp;Registrar tareas  y asignarlas a pasantes</td>
 			</tr>
 			<tr>

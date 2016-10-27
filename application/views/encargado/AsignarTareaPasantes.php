@@ -28,6 +28,7 @@
 						foreach ($listarPasantes as $up ) 
 						{
 						?>
+						
 						<tr>
 							<td><?php echo $up -> nombres ?></td>
 							<td><?php echo $up -> apellidos ?></td>
