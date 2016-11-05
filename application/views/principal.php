@@ -3,13 +3,11 @@
 
 <head>
 
-
-<link href="<?php echo base_url(); ?>bootstrap/css/bootstrap.css" rel="stylesheet">
- 
+<link href="<?php echo base_url(); ?>bootstrap/css/bootstrap.css"  media="screen" type="text/css" rel="stylesheet">
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>bootstrap/js/bootstrap.min.js"></script>
-  
+<style ></style>
 
 </head>
 
@@ -45,21 +43,17 @@
 				<br>
 				<br>
 				<br>
-				<form action="" method="POST">
+				<form class ="login-card" action="" method="POST">
 					<legend>Sistema de Control de Pasantes</legend>
 					<table border="0">
 					<tr>
-					<td width="60" height="60">
-						<label>Usuario</label>
-					</td>
+					
 					<td >
-						<input id="usuario" name="usuario" type="text" class="form-control" placeholder="Carnet de Identidad">
+						<input  id="usuario" name="usuario" type="text" class="form-control" placeholder="Carnet de Identidad">
 					</td>
 					</tr>
 					<tr>
-					<td width="120" height="60">
-						<label>Contraseña</0label>
-					</td>
+					
 					<td >
 					<input id="password" name="password" type="password" class="form-control" placeholder="Contraseña">
 					</td>
@@ -71,13 +65,7 @@
 					</tr>
 					</table>
 				</form>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
+				
 					<br>
 					<br>
 
