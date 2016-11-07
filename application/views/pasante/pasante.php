@@ -20,6 +20,16 @@
 				</td>
 			</tr>
 
+			<tr>
+				<td height="60">
+					<a href="" class="btn btn-primary" style='width:150px'>Lista de tareas</a>
+				</td>
+
+				<td>
+					Lista de tareas finalizadas
+				</td>
+			</tr>
+
 			<tr>	
 				<td height="60">
 					<a href="<?php echo base_url(); ?>index.php/Horarios"  class="btn btn-primary" style='width:150px'>Horarios</a>

@@ -6,7 +6,7 @@ class controlIngresarEstadoPasante extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('headerPrincipal');
+		$this->load->view('header');
 		$this->load->view('pasante/ingresarEstadoTarea');
 		$this->load->view('footer');
 
