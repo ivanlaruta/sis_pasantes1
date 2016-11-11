@@ -1,7 +1,7 @@
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>	
 
 
-	<div align="center">
+	<div align="center" >
 		<table border="0">
 			<tr>
 				<td colspan="2">
@@ -12,10 +12,8 @@
 
 			<tr>
 				<td height="60">
-					<a href="" class="btn btn-primary" style='width:150px'>Registrar Tareas</a>
-				</td>
-
-				<td>
+					<a href="" class="btn btn-primary" style='width:150px'>   Registrar Tareas</a>
+				</td>				<td>
 					Registrar Tareas Realizadas
 				</td>
 			</tr>
