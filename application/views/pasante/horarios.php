@@ -1,3 +1,4 @@
+      
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>	
 	 	
 	<form action="<?php echo base_url();?>index.php/controlHorarioPasante" method="POST">
@@ -12,22 +13,47 @@
        <th>VIERNES</th>
   </tr>
   <tr>
-      <td>7:30 - 9:00</td>
-      <td></td>
+      <td>07:30- 08:15</td>
+ 
+      <td><img src="<?php echo base_url(); ?>images/plus.jpg" width="20" height="20"></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
   </tr>
   <tr>
-      <td>9:15 - 10:45</td>
+      <td>08:15- 09:00</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
   <tr>
-      <td>11:00 - 12:30</td>
+  <tr>
+      <td>09:15- 10:00</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  <tr>
+  <tr>
+      <td>10:00- 10:45</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  <tr>
+  <tr>
+      <td>11:00- 11:45</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  <tr>
+      <td>11:45- 12:30</td>
       <td></td>
       <td></td>
       <td></td>
@@ -35,7 +61,7 @@
       <td></td>
   </tr>  
   <tr>
-      <td>12:45 - 14:15</td>
+      <td>12:45- 13:30</td>
       <td></td>
       <td></td>
       <td></td>
@@ -43,7 +69,7 @@
       <td></td>
   </tr> 
   <tr>
-      <td>14:30 - 16:00</td>
+      <td>13:30- 14:15</td>
      <td></td>
      <td></td>
      <td></td>
@@ -51,7 +77,7 @@
      <td></td>
   </tr> 
   <tr>
-      <td>16:15 - 17:45</td>
+      <td>14:30- 15:15</td>
       <td></td>
       <td></td>
       <td></td>
@@ -59,7 +85,7 @@
       <td></td>
   </tr>
   <tr>
-      <td>18:00 - 19:30</td>
+      <td>15:15- 16:00</td>
       <td></td>
       <td></td>
       <td></td>
@@ -67,7 +93,55 @@
       <td></td>
   </tr>
   <tr>
-      <td>19:45 - 21:15</td>
+      <td>16:15- 17:00</td>
+     <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  </tr>
+  <tr>
+      <td>17:00- 17:45</td>
+     <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  </tr>
+  <tr>
+      <td>18:00- 18:45</td>
+     <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  </tr>
+  <tr>
+      <td>18:45- 19:30</td>
+     <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  </tr>
+  <tr>
+      <td>19:45- 20:30</td>
+     <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  </tr>
+  <tr>
+      <td>20:30- 21:15</td>
+     <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  </tr>
+  <tr>
+      <td>21:15- 22:00</td>
      <td></td>
       <td></td>
       <td></td>

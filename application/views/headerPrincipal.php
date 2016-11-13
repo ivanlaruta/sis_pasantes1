@@ -7,7 +7,6 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="<?php echo base_url(); ?>bootstrap/css/bootstrap.css" rel="stylesheet">
 
-		
 	<br>
 
 	<div align="center">
@@ -47,5 +46,13 @@
 	 	<h2>Bienvenido: <?php echo $this->session->userdata('nombrerol');?></h2>
 	</div>
 	
-
+<link  rel="stylesheet" href="<?php echo base_url(); ?>bootstrap/css/datepicker.css">
+<link  rel="stylesheet" href="<?php echo base_url(); ?>bootstrap/css/bootstrap.css">
+<script src="js/main.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script>
+$(function(){
+	$('.datepicker').datepicker();
+}) 
+</script>
 </head>
