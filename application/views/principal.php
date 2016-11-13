@@ -49,7 +49,7 @@
 					<tr>
 					
 					<td >
-						<input  id="usuario" name="usuario" type="text" class="form-control" placeholder="Carnet de Identidad">
+						<input  id="usuario" name="usuario" type="text" class="form-control" placeholder="Usuario">
 					</td>
 					</tr>
 					<tr>

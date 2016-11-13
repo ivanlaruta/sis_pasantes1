@@ -9,7 +9,7 @@
 
 
 <div align="center">
-		<table class="table">
+		<table class="table table-bordered">
 			
 				<thead>
 					<th>Nombres</th>
