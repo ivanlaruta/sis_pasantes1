@@ -32,6 +32,15 @@
  		</tr>
 
  		<tr>
+ 			<td><input type="hidden" name="estado" value="Pendiente"></td>
+ 		</tr>
+
+ 		<tr>
+ 			<td><input type="hidden" name="fechaactual" value="<?php echo date("Y-m-d");?>"></td>
+ 			<td><input type="hidden" name="usuario" value="<?php echo $this->session->userdata('idusuario');?>"></td>
+ 		</tr>
+
+ 		<tr>
  			<td colspan="2"><center><input type="submit" class="btn btn-success" value="Enviar Solicitud" align="center"></center></td>
  			
  		</tr>
