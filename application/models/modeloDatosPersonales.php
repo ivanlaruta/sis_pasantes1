@@ -1,11 +1,8 @@
-
-
-
 <?php
 /**
 * 
 */
-class mPasante extends CI_Model
+class modeloDatosPersonales extends CI_Model
 {
 	
 	function __construct()
@@ -13,45 +10,18 @@ class mPasante extends CI_Model
 		parent::__construct();
 	}
 
-	public function guardarPasante($param)
-	{
-		$campos = array(
-			'cat_carrera' =>$param['cat_carrera'] ,
-			'id_persona' =>$param['id_persona'] 
-			);
-		$this ->db->insert('pasante',$campos);
+	public function mostrar(){
+
+		$query=$this->db->get('persona');
+		foreach ($query->result() as $fila) {
+			$data[] = $fila;
+		}
+		return $data;
 	}
 
-
-
-
-	public function listarPasantes ()
-	{
-		$this->db->select('pe.*, pa.*');
-		$this->db->from('persona pe ,pasante pa');
-		$this->db->where('pe.id_persona = pa.id_persona');
-		$this->db->where('pe.id_rol', 3);		
-
-		$resultado = $this->db->get();
-		
-		if ($resultado->num_rows()>0) {
-			return $resultado -> result();
-		}
-		return FALSE;
-	}
-
-	public function listarPasantes2 ()
-	{
-		$this->db->select('pe.nombres, pe.apellidos');
-		$this->db->from('persona pe ,pasante pa');
-		$this->db->where('pe.id_persona = pa.id_persona');
-		$this->db->where('pe.id_rol', 3);		
-
-		$resultado = $this->db->get();
-		
-		if ($resultado->num_rows()>0) {
-			 return $resultado -> result();
-		}
+	public function obtener($id){
+		$this->db->where('id_persona', $id);
+		$query 
 	}
 
 	public function mostrarDatos(){
@@ -67,8 +37,7 @@ class mPasante extends CI_Model
 
 			$nombre = array(
 				'idusuario' => $r->id_persona,
-				'nom' => $r->nombres,
-				'nombrerol' => $r->nombres." ".$r->apellidos,
+				'nombrerol' => $r->nombres." ".$r->apellidos.','.$r->rol,
 				'id_rol'=> $r->id_rol
 				);
 			$this->session->set_userdata($nombre);

@@ -16,7 +16,7 @@ class Solicitudpermiso extends CI_Controller {
 		$datos['arrProfesiones'] = $this->modelosolicitud->get_permisos();
     
 // cargamos  la interfaz y le enviamos los datos
-$this->load->view('pasante/solicitudpermiso', $datos);
+//$this->load->view('pasante/solicitudpermiso', $datos);
 	}
 
 	

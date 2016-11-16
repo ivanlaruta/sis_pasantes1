@@ -16,8 +16,8 @@ class Datospersonales extends CI_Controller {
 
 	public function mostrar(){
 
-		echo $id = $this->uri->segment(3);
-		$obtenerEnlace = $this->mPasante->obtenerEnlace();
+		$id = $this->uri->segment(3);
+		$obtenerEnlace = $this->mPasante->obtenerEnlace($id);
 
 		if ($obtenerEnlace != FALSE) {
 			foreach ($obtenerEnlace->result() as $row) {
@@ -50,7 +50,7 @@ class Datospersonales extends CI_Controller {
 		}		
 
 		$this->load->view('header');
-		$this->load->view('pasante/datospersonales');
+		$this->load->view('pasante/datospersonales', $data);
 		$this->load->view('footer');	
 	}
 }
