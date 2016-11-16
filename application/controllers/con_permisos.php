@@ -27,9 +27,14 @@ class Con_permisos extends CI_Controller
 public function enviar()
 		{
 
-			echo "hola entre al metodo guardar";
+
+			echo'<script language="javascript">alert("Solicitud Enviada");</script>';
+			//echo "hola entre al metodo guardar";
 			$param['fecha_permiso'] = $this->input->post('fechasol');
 			$param['descripcion'] = $this->input->post('solicitud');
+			$param['cat_estado_per'] =$this->input->post('estado');
+			$param['fecha']=$this->input->post('fechaactual');
+			$param['id_pasante']=$this->input->post('usuario');
 
 
 			$this->mod_permiso->enviar($param);
