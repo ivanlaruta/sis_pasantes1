@@ -1,5 +1,3 @@
-
-
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>
 
 
@@ -21,7 +19,7 @@
 
 			<tr>
 				<td height="60">
-					<a href="<?php echo base_url(); ?>index.php/ListaAsignarTareaPasantes" class="btn btn-primary" style='width:170px'>listar</a>
+					<a href="<?php echo base_url(); ?>index.php/controlPruebaListaPasante" class="btn btn-primary" style='width:170px'>listar</a>
 				</td>
 				<td>&nbsp;lista de pasante</td>
 			</tr>
