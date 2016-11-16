@@ -2,15 +2,10 @@
 
 
 <body >	
-
-
-
-
-
  
  	<div class="row-fluid">
 
- 	<form action="">
+ 	<form action="con_permisos/enviar" method="POST">
  	<table class="table table-bordered">
 		<tr>
 			<td colspan="2"><legend>Solicitud de Permisos</legend></td>
@@ -18,12 +13,12 @@
 
  		<tr>
  			<td><label>Nombre del Pasante: </label></td>
- 			<td><p id=""> <?php echo $this->session->userdata('nombrerol');?></p></td>
+ 			<td><p id="usuario"> <?php echo $this->session->userdata('nombrerol');?></p></td>
  		</tr>
 
  		<tr>
  			<td><label>Fecha Actual: </label></td>
- 			<td><p><?php echo date("Y-d-m");?></p></td>
+ 			<td><p id="fechaactual"><?php echo date("Y-d-m");?></p></td>
  		</tr>
 
  		<tr>
