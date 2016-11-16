@@ -28,7 +28,7 @@
 
  		<tr>
  			<td><label>Descripción:</label></td>
- 			<td><textarea name="solicitud" placeholder="Ingresa la descripcion de tu solicitud" style="height: 200px;width: 500px"></textarea></td>
+ 			<td><textarea name="solicitud" placeholder="Ingresa la descripcion de tu solicitud" style="height: 200px;width: 700px"></textarea></td>
  		</tr>
 
  		<tr>

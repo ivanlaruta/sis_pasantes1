@@ -56,7 +56,7 @@
 
 			<tr>
 				<td height="60">
-					<a href="" class="btn btn-primary" style='width:170px'>Observaciones</a>
+					<a href="<?php echo base_url(); ?>index.php/Observa" class="btn btn-primary" style='width:170px'>Observaciones</a>
 				</td>
 
 				<td>
