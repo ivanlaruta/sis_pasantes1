@@ -43,7 +43,7 @@
 	 </div>
 
 	<div align="center">
-	 	<h2>Bienvenido: <?php echo $this->session->userdata('nombrerol');?></h2>
+	 	<h2>Bienvenido: <?php echo $this->session->userdata('nombre');?></h2>
 	</div>
 	
 <link  rel="stylesheet" href="<?php echo base_url(); ?>bootstrap/css/datepicker.css">

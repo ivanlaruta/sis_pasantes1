@@ -1,3 +1,6 @@
+
+
+
 <?php
 /**
 * 
@@ -64,7 +67,8 @@ class mPasante extends CI_Model
 
 			$nombre = array(
 				'idusuario' => $r->id_persona,
-				'nombrerol' => $r->nombres." ".$r->apellidos.','.$r->rol,
+				'nom' => $r->nombres,
+				'nombrerol' => $r->nombres." ".$r->apellidos,
 				'id_rol'=> $r->id_rol
 				);
 			$this->session->set_userdata($nombre);
