@@ -13,7 +13,7 @@
 	<div align="center">
 	<table border="1">
 	<tr>
-	<td width="800" bgcolor="white">
+	<td width="1000" bgcolor="white">
 
 	<div align="center">	
 		<table border="0">
