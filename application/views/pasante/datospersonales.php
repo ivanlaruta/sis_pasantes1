@@ -1,54 +1,56 @@
 <body >	
 
-<form id ="form" name="form" action="<?=base_url()?>index.php/Datospersonales/mostrar/" method="POST">
-	<div align="center">
-		<table border="0">
+ <div align="center">
+
+<table border="0">
 				<tr>
 					<td colspan="2">
 						<center> <h2><b>DATOS ADICIONALES DE LA PERSONA</b></h2></center>
 					</td>
 				</tr>
 				<tr>
- 			<td><label>C.I  </label></td>
- 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('id_rol');?>"></td>
- 		</tr>
-				<tr>
- 			<td><label>Nombre  </label></td>
- 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('nombrerol');?>"></td>
- 		</tr>
-
+					<td><label>C.I.</label></td>
+					<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('carnet_identidad');?>" readonly="readonly"></td>
+				</tr>
 				
 				<tr>
- 			<td><label>Apellido  </label></td>
- 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('nombrerol');?>"></td>
- 		</tr>
+					<td><label>Nombres</label></td>
+					<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('nombres');?>" readonly="readonly"></td>
+				</tr>
+				
 				<tr>
- 			<td><label>Direccion </label></td>
- 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('direccion');?>"></td>
- 		</tr>
+					<td><label>Apellidos</label></td>
+					<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('apellidos');?>" readonly="readonly"></td>
+				</tr>
 
 				<tr>
- 			<td><label>Telefono </label></td>
- 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('nom');?>"></td>
- 		</tr>
+					<td><label>Direccion</label></td>
+					<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('direccion');?>" readonly="readonly"></td>
+				</tr>
 
 				<tr>
- 			<td><label>Email </label></td>
- 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('email');?>"></td>
- 		</tr>
+					<td><label>Telefono</label></td>
+					<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('telefono');?>" readonly="readonly"></td>
+				</tr>
 
 				<tr>
- 			<td><label>Fecha nacimiento </label></td>
- 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('nom');?>"></td>
- 		</tr>
-<tr>
- 			<td><label>Usuario </label></td>
- 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('nom');?>"></td>
- 		</tr>
+					<td><label>Correo</label></td>
+					<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('email');?>" readonly="readonly"></td>
+				</tr>
+
+				<tr>
+					<td><label>fecha de nacimiento</label></td>
+					<td><input type="date" class="form-control" value="<?php echo $this->session->userdata('fecha_nacimiento');?>" readonly="readonly"></td>
+				</tr>
+
+				<tr>
+					<td><label>usuario</label></td>
+					<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('usuario');?>"></td>
+				</tr>
 
 				<tr>
 					<td><label>password</label></td>
-					<td><input type="password" class="form-control" value="<?php echo $this->session->userdata('nom');?>"></td>
+					<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('password');?>"></td>
 				</tr>
 
 				<tr>
@@ -59,5 +61,4 @@
 			
 </table>
 </div>
-</form>
 </body>

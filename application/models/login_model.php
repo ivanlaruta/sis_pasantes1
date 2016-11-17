@@ -14,7 +14,7 @@ class login_model extends CI_Model
 
 	public function login ($usuario,$password)
 	{
-		$this->db->select('p.id_persona, p.nombres, p.apellidos, r.rol,r.id_rol');
+		$this->db->select('p.id_persona, p.nombres, p.apellidos, r.rol,r.id_rol, p.carnet_identidad, p.direccion, p.telefono, p.email, p.fecha_nacimiento, p.usuario, p.password');
 		$this->db->from('persona p');
 		$this->db->join('rol r','p.id_rol = r.id_rol');
 		
@@ -30,7 +30,16 @@ class login_model extends CI_Model
 				'idusuario' => $r->id_persona,
 				'nombre'=>$r->nombres." ".$r->apellidos,
 				'nombrerol' => $r->nombres." ".$r->apellidos,
-				'id_rol'=> $r->id_rol
+				'nombres' => $r->nombres,
+				'apellidos' => $r->apellidos,
+				'id_rol'=> $r->id_rol,
+				'carnet_identidad'=> $r->carnet_identidad,
+				'direccion' => $r->direccion,
+				'telefono' => $r->telefono,
+				'email' => $r->email,
+				'fecha_nacimiento' => $r->fecha_nacimiento,
+				'usuario' => $r->usuario,
+				'password' => $r->password
 
 				);
 			$this->session->set_userdata($nombre);
