@@ -10,11 +10,14 @@ class RegistroPasante extends CI_Controller
 		$this -> load -> model('modeloRegistroPersona');
 		$this -> load -> model('registrarPasante');
 		$this -> load->library('encrypt');
+		$this -> load->model('mCatalogo');
 	}
 
 	public function index(){
+
+		$datos['resultado'] = $this->mCatalogo->listarCarreras();
 		$this->load->view('header');
-		$this -> load-> view ('encargado/RegistroPasante');
+		$this -> load-> view ('encargado/RegistroPasante', $datos);
 		$this->load->view('footer');
 	}
 	public function guardar(){

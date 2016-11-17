@@ -2,7 +2,7 @@
 	 	
 	<form action="<?php echo base_url();?>index.php/registroPasante/guardar" method="POST">
 		<div align="center">
-			<table border="0">
+			<table >
 				<tr>
 					<td colspan="2">
 						<center><h3>Registro de Pasantes</h3></center>
@@ -53,15 +53,32 @@
 					<td><input type="password" class="form-control" name="password"></td>
 				</tr>
 
+				
 				<tr>
-					<td><label>carrera</label></td>
-					<td><input type="text" class="form-control" name="cat_carrera"></td>
+					<td><label>Carrera</label></td>
+					<td>
+                     <select name="cat_carrera">
+                                <?php 
+                                    
+                                    foreach ($resultado as $row) {
+                                        
+                                            ?>
+                                            <option  value=<?php echo $row->key;?> >
+                                            	<?php echo $row->key;?>
+                                            </option>
+                                            <?php
+                                       
+                                    }
+                                ?>
+                      </select>
+						</td>
+						
 				</tr>
+				<tr>
+				...
+				</tr>
+				<tr>
 
-				<tr>
-					<td>.</td>							
-				</tr>
-				<tr>
 					<td><input type="submit" value="Guardar" class="btn btn-primary" style='width:120px'></td>
 					<td><a href="<?php echo base_url();?>index.php/ControlPasantes" class="btn btn-primary"  style='width:120px'>Cancelar</a></td>
 										

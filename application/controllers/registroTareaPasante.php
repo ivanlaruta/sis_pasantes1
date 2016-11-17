@@ -40,6 +40,5 @@ class RegistroTareaPasante extends CI_Controller
 						$this -> load-> view ('encargado/controlPasantes');
 						$this->load->view('footer');
 
-
 	}
 }
