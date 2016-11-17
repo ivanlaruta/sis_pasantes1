@@ -181,7 +181,9 @@ optgroup {
 }
 table {
   border-spacing: 0;
+  padding: 20px;
   border-collapse: collapse;
+  padding: 20px;
 }
 td,
 th {
@@ -250,6 +252,7 @@ th {
   }
   .table {
     border-collapse: collapse !important;
+    padding: 20px;
   }
   .table td,
   .table th {
@@ -3524,6 +3527,9 @@ tbody.collapse.in {
   position: absolute;
   top: 100%;
   left: 0;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
   z-index: 1000;
   display: none;
   float: left;
@@ -3539,9 +3545,6 @@ tbody.collapse.in {
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, .15);
   border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-}
 .dropdown-menu.pull-right {
   right: 0;
   left: auto;
@@ -6756,6 +6759,8 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+
+tr:hover td { background: #C95D63; color: #AE8799; 
 }
 
 
@@ -6835,6 +6840,6 @@ button.close {
   /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
 }
 
-
+tr:hover td { background: #C95D63; color: #AE8799; }
 
 /*# sourceMappingURL=bootstrap.css.map */

@@ -42,7 +42,7 @@ class mPasante extends CI_Model
 
 	public function listarPasantes2 ()
 	{
-		$this->db->select('pe.nombres, pe.apellidos');
+		$this->db->select('pe.id_persona,pe.nombres, pe.apellidos');
 		$this->db->from('persona pe ,pasante pa');
 		$this->db->where('pe.id_persona = pa.id_persona');
 		$this->db->where('pe.id_rol', 3);		
