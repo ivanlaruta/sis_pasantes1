@@ -67,9 +67,11 @@ class mPasante extends CI_Model
 
 			$nombre = array(
 				'idusuario' => $r->id_persona,
-				'nom' => $r->nombres,
+				'nom' => $r->usuario,
+'direccion' => $r->direccion,
 				'nombrerol' => $r->nombres." ".$r->apellidos,
-				'id_rol'=> $r->id_rol
+			
+				'id_rol'=> $r->id_rol,
 				);
 			$this->session->set_userdata($nombre);
 			return TRUE;

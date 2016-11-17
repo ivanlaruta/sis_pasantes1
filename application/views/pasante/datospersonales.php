@@ -9,48 +9,46 @@
 					</td>
 				</tr>
 				<tr>
-					<td><label>C.I.</label></td>
-					<td><input type="text" class="form-control" name="carnet_identidad" id="carnet_identidad" maxlength="8" value="<?=$carnet_identidad?>"></td>
-				</tr>
+ 			<td><label>C.I  </label></td>
+ 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('id_rol');?>"></td>
+ 		</tr>
+				<tr>
+ 			<td><label>Nombre  </label></td>
+ 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('nombrerol');?>"></td>
+ 		</tr>
+
 				
 				<tr>
-					<td><label>Nombres</label></td>
-					<td><input type="text" class="form-control" name="nombres" name="nombres" value="<?=$nombres?> placeholder=" Juaj"></td>
-				</tr>
-				
+ 			<td><label>Apellido  </label></td>
+ 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('nombrerol');?>"></td>
+ 		</tr>
 				<tr>
-					<td><label>Apellidos</label></td>
-					<td><input type="text" class="form-control" name="apellidos" id="apellidos" placeholder=" Perez"></td>
-				</tr>
+ 			<td><label>Direccion </label></td>
+ 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('direccion');?>"></td>
+ 		</tr>
 
 				<tr>
-					<td><label>Direccion</label></td>
-					<td><input type="text" class="form-control" name="direccion" id="direccion" placeholder=" Sopocachi"></td>
-				</tr>
+ 			<td><label>Telefono </label></td>
+ 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('nom');?>"></td>
+ 		</tr>
 
 				<tr>
-					<td><label>Telefono</label></td>
-					<td><input type="text" class="form-control" name="telefono" id="telefono" placeholder="2220616"></td>
-				</tr>
+ 			<td><label>Email </label></td>
+ 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('email');?>"></td>
+ 		</tr>
 
 				<tr>
-					<td><label>Email</label></td>
-					<td><input type="text" class="form-control" name="email" id="email" placeholder="usuario@gmail.com"></td>
-				</tr>
-
-				<tr>
-					<td><label>fecha de nacimiento</label></td>
-					<td><input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="09/06/1990"></td>
-				</tr>
-
-				<tr>
-					<td><label>usuario</label></td>
-					<td><input type="text" class="form-control" name="usuario" id="usuario" placeholder="mariela"></td>
-				</tr>
+ 			<td><label>Fecha nacimiento </label></td>
+ 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('nom');?>"></td>
+ 		</tr>
+<tr>
+ 			<td><label>Usuario </label></td>
+ 			<td><input type="text" class="form-control" value="<?php echo $this->session->userdata('nom');?>"></td>
+ 		</tr>
 
 				<tr>
 					<td><label>password</label></td>
-					<td><input type="password" class="form-control" name="password" id="password" placeholder="******"></td>
+					<td><input type="password" class="form-control" value="<?php echo $this->session->userdata('nom');?>"></td>
 				</tr>
 
 				<tr>
