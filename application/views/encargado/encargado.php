@@ -35,7 +35,7 @@
 
 			<tr>
 				<td height="60">
-					<a href="" class="btn btn-primary" style='width:170px'>Datos Personales</a>
+					<a href="<?php echo base_url(); ?>index.php/Datospersonales" class="btn btn-primary" style='width:170px'>Datos Personales</a>
 				</td>
 
 				<td>
