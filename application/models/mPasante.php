@@ -22,9 +22,6 @@ class mPasante extends CI_Model
 		$this ->db->insert('pasante',$campos);
 	}
 
-
-
-
 	public function listarPasantes ()
 	{
 		$this->db->select('pe.*, pa.*');
@@ -98,6 +95,14 @@ class mPasante extends CI_Model
 		}else{
 			return FALSE;
 		}
+	}
+
+	public function eliminar($id){
+		//$this->db->where('id_persona', $id);		
+		//$this->db->delete('persona');
+		$this->db->where('id_pasante', $id);		
+		$this->db->delete('pasante');
+
 	}
 }
 

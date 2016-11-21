@@ -25,6 +25,10 @@ class controlEliminarPasante extends CI_Controller
 		$this->load->view('footer');
 	}
 
+	public function eliminar(){
+		$id = $this->uri->segment(3);
+		$this->mPasante->eliminar($id);
+	}
 	
 	
 }

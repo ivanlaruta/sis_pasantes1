@@ -55,8 +55,11 @@
                                             	<td>
                                             	<?php echo $row->fecha_nacimiento;?>
                                             	</td>
-                                            	<td>
+                                            	<!--<td>
                                                 	<input type="submit" value="Eliminar" class="btn btn-primary" style='width:120px'>
+                                                </td>-->
+                                                <td>
+                                                	<?php echo "<a href=".base_url()."index.php/controlEliminarPasante/eliminar/".$row->id_persona.">Eliminar</a>";?>
                                                 </td>
                                             <tr>
                                             <?php
