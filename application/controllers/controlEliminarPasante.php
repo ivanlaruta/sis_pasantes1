@@ -1,14 +1,30 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-
-class controlEliminarPasante extends CI_Controller {
-
-	public function index()
+/**
+* 
+*/
+class controlEliminarPasante extends CI_Controller
+{
+	function __construct()
 	{
-		$this->load->view('header');
-		$this->load->view('encargado/eliminarPasante');
-		$this->load->view('footer');
+		parent:: __construct();
+
+		$this -> load -> model('mTarea');
+		$this -> load -> model('mPasante');
+		//$this -> load -> model('registrarPasante');
+		$this -> load->library('encrypt');
+	
 
 	}
+
+	public function index(){
+
+	$datos['resultado'] = $this->mPasante->listarPasantes();
+    
+		$this->load->view('header');
+		$this -> load-> view ('encargado/eliminarPasante', $datos);
+		$this->load->view('footer');
+	}
+
+	
+	
 }
