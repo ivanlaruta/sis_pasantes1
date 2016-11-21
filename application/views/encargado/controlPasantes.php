@@ -21,7 +21,7 @@
 				<td height="60">
 					<a href="<?php echo base_url(); ?>index.php/listaPasantes" class="btn btn-primary" style='width:170px'>listar</a>
 				</td>
-				<td>&nbsp;lista de pasante</td>
+				<td>&nbsp;Lista de pasante</td>
 			</tr>
 
 			<tr>

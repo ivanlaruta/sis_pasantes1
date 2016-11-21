@@ -59,7 +59,14 @@
                                                 	<input type="submit" value="Eliminar" class="btn btn-primary" style='width:120px'>
                                                 </td>-->
                                                 <td>
-                                                	<?php echo "<a href=".base_url()."index.php/controlEliminarPasante/eliminar/".$row->id_persona.">Eliminar</a>";?>
+                                                	<!--<?php echo "<a href=".base_url()."index.php/controlEliminarPasante/eliminar/".$row->id_persona.">Eliminar</a>";?>
+                                                	
+                                                	<a href="<?=base_url()?>index.php/controlEliminarPasante/eliminar/<?=$row->id_persona?>" class="btn btn-primary" style='width:170px'>Eliminar</a>-->
+
+                                                	<a href="<?php echo base_url().'index.php/controlEliminarPasante/eliminar/'.$row->id_persona; ?>" class="btn btn-primary" style='width:170px'>Eliminar</a>
+
+
+                                                	
                                                 </td>
                                             <tr>
                                             <?php

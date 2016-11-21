@@ -102,6 +102,15 @@ class mPasante extends CI_Model
 		//$this->db->delete('persona');
 		$this->db->where('id_pasante', $id);		
 		$this->db->delete('pasante');
+		if ($this->db->affected_rows() > 0) {
+			echo "<script type='text/javascript'>
+				alert('se elimino correctamente');
+				</script>";
+			redirect('controlEliminarPasante');
+		}
+		else{
+			echo "hecho";;
+		}
 
 	}
 }
