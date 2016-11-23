@@ -6,12 +6,12 @@
 			<table border="0">
 			<tr>
 					<td colspan="2">
-						<center><h4>Lista de pasantes</h4></center>
+						<center><h4>Asignacion de pasantes</h4></center>
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2">
-						<center><h5></h5></center>
+						<center><h5>Porfavor seleccione a los pasantes para la tarea.</h5></center>
 					</td>
 				</tr>
 
@@ -23,13 +23,7 @@
 				 <thead>
 				<tr>
 					<td>ID</td>
-					<td>NOMBRES:</td>
-					<td>DIRECCION</td>
-					<td>TELEFONO</td>
-					<td>EMAIL:</td>
-					<td>FECHA NAACIMINETO</td>
-					<td>CARRERA:</td>
-					
+					<td>PASANTES DISPONIBLES:</td>
 					<td>OPCION</td>
 				</tr>
 				</thead>
@@ -42,38 +36,44 @@
                                                 <td>
                                             	<?php echo $row->nombres;?>
                                                 <?php echo $row->apellidos;?>
-                                 
+                                                
                                                 </td>
                                                 <td>
-                                            	<?php echo $row->direccion;?>
-                                            	</td>
-                                            	<td>
-                                            	<?php echo $row->telefono;?>
-                                            	</td>
-                                            	<td>
-                                            	<?php echo $row->email;?>
-                                            	</td>
-                                            	<td>
-                                            	<?php echo $row->fecha_nacimiento;?>
-                                            	</td>
-                                            	<td>
-                                            	<?php echo $row->cat_carrera;?>
-                                            	</td>
-                                                <td>
-                                                	<!--<input type="checkbox" name="id" value=<?php echo $row->id_persona;?> <br>-->
-                                                	<a href="" class="btn btn-primary"  style='width:120px'>Modificar</a>
-                                                    <a href="" class="btn btn-primary"  style='width:120px'>Eliminar</a>
+                                                	<input type="checkbox" name="ids[]" value="<?php  echo $row->id_persona ?>"> <br>
+                                                	<!--<input type="submit" value="<?php echo $row->id_persona;?>" class="btn btn-primary" style='width:120px'>
+                                                	-->
                                                 </td>
+
                                             <tr>
                                             <?php
                                        
                                     }
                                 ?> 
                 </tbody>
-                </table>
 
+                </table>
+                <?php $datos = $this -> input -> post('ids');?>
+
+
+                 <table class="table table-bordered">
+				
+					<?php  foreach ($datos as $row) { ?>
+                                            <tr> 
+                                            	<td>
+                                            	<?php echo $row->value;?>
+                                          
+                                                </td>
+
+                                            <tr>
+                                            <?php
+                                       
+                                    }
+                    ?> 
+                </tbody>
+                </table>
 		</div>
 
+ -->
 		<div align="center">
 					<input type="submit" value="Guardar" class="btn btn-primary" style='width:120px'>
 					<a href="<?php echo base_url();?>index.php/ControlPasantes" class="btn btn-primary"  style='width:120px'>Cancelar</a>

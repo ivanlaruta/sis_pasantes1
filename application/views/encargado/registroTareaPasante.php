@@ -26,7 +26,7 @@
 			</table>
 		</div>
 		<div align="center">
-					<input type="submit" value="Guardar" class="btn btn-primary" style='width:120px'>
+					<input type="submit" value="siguiente" class="btn btn-primary" style='width:120px'>
 					<a href="<?php echo base_url();?>index.php/ControlPasantes" class="btn btn-primary"  style='width:120px'>Cancelar</a>
 		</div>							
 		

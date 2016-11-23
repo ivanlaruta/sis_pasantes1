@@ -29,16 +29,17 @@ class RegistroTareaPasante extends CI_Controller
 	public function guardar(){
 		#desc
 		$param['actividad'] = $this -> input -> post('actividad');
-
+		$datos['resultado'] = $this->mPasante->listarPasantes2();
 		$lastId = $this->mTarea->guardar($param);
 
-		echo "<script type='text/javascript'>
+		/*echo "<script type='text/javascript'>
 				alert('guardado correcto');
-				</script>";
+				</script>";*/
 
 						$this->load->view('header');
-						$this -> load-> view ('encargado/controlPasantes');
+						$this -> load-> view ('encargado/registroTareaPasantes', $datos);
 						$this->load->view('footer');
+
 
 	}
 }
