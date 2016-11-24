@@ -39,9 +39,7 @@
                                                 
                                                 </td>
                                                 <td>
-                                                	<input type="checkbox" name="ids[]" value="<?php  echo $row->id_persona ?>"> <br>
-                                                	<!--<input type="submit" value="<?php echo $row->id_persona;?>" class="btn btn-primary" style='width:120px'>
-                                                	-->
+                                                	<input type="checkbox" name="ids[]" value="<?php  echo $row->id_persona ?>"> <br>  
                                                 </td>
 
                                             <tr>
@@ -54,26 +52,20 @@
                 </table>
                 <?php $datos = $this -> input -> post('ids');?>
 
-
                  <table class="table table-bordered">
 				
 					<?php  foreach ($datos as $row) { ?>
                                             <tr> 
                                             	<td>
-                                            	<?php echo $row->value;?>
-                                          
+                                            	<?php echo $row->value;?>                                          
                                                 </td>
-
                                             <tr>
-                                            <?php
-                                       
+                                            <?php                                      
                                     }
                     ?> 
                 </tbody>
                 </table>
 		</div>
-
- -->
 		<div align="center">
 					<input type="submit" value="Guardar" class="btn btn-primary" style='width:120px'>
 					<a href="<?php echo base_url();?>index.php/ControlPasantes" class="btn btn-primary"  style='width:120px'>Cancelar</a>

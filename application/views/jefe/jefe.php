@@ -24,7 +24,26 @@
 
 			<tr>
 				<td height="60">
-					<a href="" class="btn btn-primary" style='width:170px'>Listado de Pasantes</a>
+					<a href="<?php echo base_url(); ?>index.php/listaPasantes" class="btn btn-primary" style='width:170px'>Listado de Pasantes</a>
+				</td>
+				
+
+				<td><center>
+					<select class="form-control" style='width:150px'>
+				  		<option>1-2014</option>
+				  		<option>2-2014</option>
+				  		<option>1-2015</option>
+				  		<option>2-2015</option>
+				  		<option>1-2016</option>
+						<option>2-2016</option>
+					</select>
+					</center>
+				</td>
+			</tr>
+
+			<tr>
+				<td height="60">
+					<a href="<?php echo base_url(); ?>index.php/listaEncargados" class="btn btn-primary" style='width:170px'>Listado de Encargados</a>
 				</td>
 
 				<td><center>
@@ -42,25 +61,7 @@
 
 			<tr>
 				<td height="60">
-					<a href="" class="btn btn-primary" style='width:170px'>Listado de Encargados</a>
-				</td>
-
-				<td><center>
-					<select class="form-control" style='width:150px'>
-				  		<option>1-2014</option>
-				  		<option>2-2014</option>
-				  		<option>1-2015</option>
-				  		<option>2-2015</option>
-				  		<option>1-2016</option>
-						<option>2-2016</option>
-					</select>
-					</center>
-				</td>
-			</tr>
-
-			<tr>
-				<td height="60">
-					<a href="" class="btn btn-primary" style='width:170px'>Datos Personales</a>
+					<a href="<?php echo base_url(); ?>index.php/Datospersonales" class="btn btn-primary" style='width:170px'>Datos personales</a>
 				</td>
 
 				<td>
