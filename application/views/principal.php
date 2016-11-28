@@ -20,6 +20,8 @@
 					<ol class="carousel-indicators">
 						<li data-target="myslide" data-slide-to="1" class="active"></li>
 						<li data-target="myslide" data-slide-to="2"></li>
+						<li data-target="myslide" data-slide-to="3"></li>
+						<li data-target="myslide" data-slide-to="4"></li>
 					</ol>
 
 				<div class="carousel-inner">
@@ -30,6 +32,16 @@
 					<div class="item">
 						<img src="<?php echo base_url(); ?>images/1.jpg" width="1000" height="1000">
 					</div>
+
+					<div class="item">
+						<img src="<?php echo base_url(); ?>images/3.jpg" width="1000" height="1000">
+					</div>
+
+					<div class="item">
+						<img src="<?php echo base_url(); ?>images/4.jpg" width="1000" height="1000">
+					</div>
+
+
 				</div>
 				<a href="#myslide" data-slide="prev" class="carousel-control left">&lsaquo;</a>
 				<a href="#myslide" data-slide="next" class="carousel-control right">&rsaquo;</a>
@@ -49,13 +61,25 @@
 					<tr>
 					
 					<td >
-						<input  id="usuario" name="usuario" type="text" class="form-control" placeholder="Usuario">
+						<div class="input-group">
+  							<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+							<input id="usuario" name="usuario" type="text" class="form-control" placeholder="Usuario">
+							
+						</div>
+						
 					</td>
 					</tr>
+					<br>
+
 					<tr>
 					
-					<td >
-					<input id="password" name="password" type="password" class="form-control" placeholder="Contraseña">
+					<td>
+					<br>
+
+						<div class="input-group">
+  							<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+							<input id="password" name="password" type="password" class="form-control" placeholder="Contraseña">
+						</div>
 					</td>
 					</tr>
 					<tr>
@@ -71,7 +95,7 @@
 
 				<legend></legend>
 				<div align="right">
-					© 1998-2016 Universidad Católica Boliviana
+					© 1998-2016 Universidad Católica Boliviana <span class="glyphicon glyphicon-pencil"></span>
 						Centro de Sistemas
 						email: csinf@ucb.edu.bo
 				</div>
