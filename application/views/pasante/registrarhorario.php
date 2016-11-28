@@ -1,5 +1,44 @@
 <body>
 
+
+<div class="container">
+
+<div class="row">
+    <div class="offset1 span 10 well">
+    <h1>Horarios</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="offset1 span5 well">
+    <?php echo form_label('Dias', 'dias') ?>
+        <?php echo form_dropdown('sDias', $dias); ?>
+
+    <?php echo form_label('Inicios', 'ini') ?>
+        <?php echo form_dropdown('sDias', array()); ?>
+    <?php echo form_label('Finales', 'fin') ?>
+        <?php echo form_dropdown('sDias', array()); ?>
+    </div>
+    <div class="span5 well">
+        <?php echo form_label('Dia', 'dias') ?>
+                <span id="dias"></span>
+                
+               
+        <?php echo form_label('Inicio', 'ini') ?>
+                <span id="ini"></span>
+        <?php echo form_label('Final', 'fin') ?>
+
+                <span id="fin"></span>
+
+    </div>
+</div>
+    
+    
+
+
+</div>
+
+
 <h1>Holllllaaa</h1>
 
 <div class="row-fluid">
