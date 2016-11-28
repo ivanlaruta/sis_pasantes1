@@ -30,7 +30,7 @@
 
 			<tr>	
 				<td height="60">
-					<a href="<?php echo base_url(); ?>index.php/Horarios"  class="btn btn-primary" style='width:150px'>Horarios</a>
+					<a href="<?php echo base_url(); ?>index.php/C_horario"  class="btn btn-primary" style='width:150px'>Horarios</a>
 					<br>
 				</td>
 
