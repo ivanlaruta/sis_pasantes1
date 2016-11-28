@@ -9,4 +9,22 @@ class Mod_horarios extends CI_Model{
         }
         return $data;
      }
+
+     function devolver_horas($id_dia)
+
+	{
+		$sql = $this->db->select('id_horario, hora_fin')
+						->where('id_dia', $iddia)
+						->get('horario');
+
+		foreach ($sql->result_array() as $reg) {
+			$data[$reg['id_horario']]=$reg['hora_fin'];
+		}
+
+		echo json_encode($data);
+     }
+
+
+
+
 }

@@ -7,6 +7,41 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="<?php echo base_url(); ?>bootstrap/css/bootstrap.css" rel="stylesheet">
 
+		<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+			<script type="text/javascript">
+
+			$(document).on('ready', function() {
+				cargarHoras();
+
+				$('#sDias').change(cargarHoras);
+
+			});
+
+			function cargarHoras (){
+
+				var coddia = $('#sDias').val();
+
+				$.getJSON('c_horario/ini', {id: coddia}, function(resp){
+
+					$('#sFin').empty();
+
+					$.each(resp, function(indice, valor){
+
+						option = $('<option></option>', {
+							value: indice,
+							text: valor,
+							class: 'clase'
+					});
+
+				$('#sFin').append(option);	
+			});
+
+			});
+
+		}
+  
+			</script>
+
 		
 	<br>
 
@@ -23,7 +58,7 @@
 				</td>
 				<td>
 					<h2><b>Universidad Católica Boliviana "San Pablo"</b></h2>
-					<h3><b>Sistema de Control de Pasantes</b></h3>
+					<h3><b>Sistema de Control de Pasantesl</b></h3>
 				</td>
 			</tr>
 		</table>
@@ -43,7 +78,41 @@
 			<a href="<?=site_url('Principal/logout')?>" class="btn btn-primary" style='width:160px'>Cerrar Sesion</a> 
 			<a href="javascript:window.history.back();" class="btn btn-primary" style='width:160px'>Volver atrás</a>	
 
+			<!--<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+			<script type="text/javascript">
 
+			$(document).on('ready', function() {
+				cargarHoras();
+
+				$('#sDias').change(cargarHoras);
+
+			});
+
+			function cargarHoras (){
+
+				var coddia = $('#sDias').val();
+
+				$.getJSON('controllers/c_horario/ini', {id: coddia}, function(resp){
+
+					$('#sFin').empty();
+
+					$.each(resp, function(indice, valor){
+
+						option = $('<option></option>', {
+							value: indice,
+							text: valor,
+							class: 'clase'
+					});
+
+				$('#sFin').append(option);	
+			});
+
+			});
+
+		}
+  
+			</script>
+			-->
 		 </div>
 	 </div>
 

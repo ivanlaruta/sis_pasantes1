@@ -1,4 +1,48 @@
+
+
+<head>
+    <title>hla</title>
+
+    <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+            <script type="text/javascript">
+
+            $(document).on('ready', function() {
+                cargarHoras();
+
+                $('#sDias').change(cargarHoras);
+
+            });
+
+            function cargarHoras (){
+
+                var id_dia = $('#sDias').val();
+
+                $.getJSON('c_horario/ini', {id: id_dia}, function(resp){
+
+                    $('#sFin').empty();
+
+                    $.each(resp, function(indice, valor){
+
+                        option = $('<option></option>', {
+                            value: indice,
+                            text: valor,
+                            class: 'clase'
+                    });
+
+                $('#sFin').append(option);  
+            });
+
+            });
+
+        }
+  
+            </script>
+
+</head>
+
+
 <body>
+
 
 
 <div class="container">
@@ -12,12 +56,12 @@
 <div class="row">
     <div class="offset1 span5 well">
     <?php echo form_label('Dias', 'dias') ?>
-        <?php echo form_dropdown('sDias', $dias); ?>
+        <?php echo form_dropdown('sDias', $dias, 4, "id='sDias'"); ?>
 
     <?php echo form_label('Inicios', 'ini') ?>
-        <?php echo form_dropdown('sDias', array()); ?>
+        <?php echo form_dropdown('sDias', array(), 1, "id='sIni'"); ?>
     <?php echo form_label('Finales', 'fin') ?>
-        <?php echo form_dropdown('sDias', array()); ?>
+        <?php echo form_dropdown('sDias', array(), null, "id='sFin' class='span4'"); ?>
     </div>
     <div class="span5 well">
         <?php echo form_label('Dia', 'dias') ?>
