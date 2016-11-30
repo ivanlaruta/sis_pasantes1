@@ -12,7 +12,8 @@
 
 			<tr>
 				<td height="60">
-					<a href="" class="btn btn-primary" style='width:150px'>   Registrar Tareas</a>
+					
+					<a href="<?php echo base_url(); ?>index.php/controlListaTareaPasante/listar( <?php echo $this->session->userdata('idusuario');?>)" class="btn btn-primary" style='width:150px'>   Registrar Tareas</a>
 				</td>				<td>
 					Registrar Tareas Realizadas
 				</td>
@@ -30,7 +31,7 @@
 
 			<tr>	
 				<td height="60">
-					<a href="<?php echo base_url(); ?>index.php/C_horario"  class="btn btn-primary" style='width:150px'>Horarios</a>
+					<a href="<?php echo base_url(); ?>index.php/Horarios"  class="btn btn-primary" style='width:150px'>Horarios</a>
 					<br>
 				</td>
 
