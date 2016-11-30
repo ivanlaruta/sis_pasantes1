@@ -57,7 +57,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="row">
                             <br>
                             <div class="col-lg-7"></div>
-                            
+                            <div class="container">
+        <h1 style="font-size:20pt">HORARIO PASANTE</h1>
+
+        <br />
+        <br />
+        <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>PASANTE</th>
+                   
+                    <th>DIA</th>
+                    <th> HORA INICIO</th>
+                    <th>HORA FIN</th>
+                    <th>OPCION</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+
+           
+        </table>
+    </div>
+
                         </div>
                         <hr>
                     
