@@ -1,47 +1,84 @@
-      
-<body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>	
- <div align="center">
-           
-       
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Horario Pasante</title>
+    <link rel="stylesheet" href="<?php echo base_url();?>bootstrap/css/bootstrap.min.css">
+    
+</head>
+<body>
+
+
+    
+    <div class="container">
+        
+        <section class="contenido">
+            <div class="row">
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab1" data-toggle="tab">Registrar</a></li>
+                    <li><a id="tab-consultar" href="#tab2" data-toggle="tab">Consultar</a></li>
+                </ul>
+               
+                <div class="tab-content">
+                    <div class="tab-pane  active" id="tab1">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4 text-center">
+                            <h2>Registro de Horario</h2>
+                            <form class="form-horizontal" role="form" action="<?php echo base_url();?>index.php/Horarios/guardar" method="POST">
+                                <div class="form-group">
+                                    <input type="text" name="pasante" class="form-control" value="Noelia"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="dia" class="form-control" placeholder="Ingrese Dia  "/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="hora_inicio" class="form-control" placeholder="Ingrese hora de inicio"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="hora_fin" class="form-control" placeholder="Ingrese hora fin"/>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block" value="Registrar">Registrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab2">
+
+                        <div class="row">
+                            <br>
+                            <div class="col-lg-7"></div>
+                            
+                        </div>
+                        <hr>
+                    
+
+                    </div>
+
+                </div>
                 
-      <div class ="login-card" >            
-                    <table border="0">
-                        <tr>
-                            <th >Dia</th>
-                            <td><input type="text" class="form-control" name="Nombre"  /></td>
-                        </tr>
-                        <tr>
-                            <th >Hora Inicio</th>
-                            <td><input type="text" class="form-control" name="Apellido"  /></td>
-                        </tr>
-                        
-                        <tr>
-                            <th >Hora Fin</th>
-                            <td><input type="text" class="form-control" name="FechaNacimiento"  /></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <button type="submit" class="btn btn-primary">Guardar</button>
-                            </td>
-                        </tr>
-                    </table>
-               </div> 
-<div class="container">
 
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Dia</th>
-                            <th>Hora Inicio</th>
-                            <th>Hora Fin</th>
-                           
-                        </tr>
-                    </thead>
-
-                </table>     
-              
             </div>
-        </div>
 
+        </section>
+
+
+    </div>
+
+ 
+<script src="<?php echo base_url();?>assets/js/jquery-1.11.3.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/empleado.js"></script>
 </body>
+</html>
+</body>
+</html>
