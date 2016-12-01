@@ -10,11 +10,19 @@ class modelohorario extends CI_Model {
         $this->load->database();
     }
 
-	function guardar($data){
-		$this->db->insert("horario",$data);
-
+	function nuevo_horario($param)
+    {
+       $campos = array(
+			'pasante' =>$param['pasante'] ,
+			'dia' =>$param['dia'] , 
+			'hora_inicio' =>$param['hora_inicio'] ,
+			'hora_fin' =>$param['hora_fin'] ,
+			
+			);
 		
-	}
+		$this ->db->insert('horario',$campos);
+		
+    }
 	public function ver(){
         //Hacemos una consulta
         $consulta=$this->db->query("SELECT * FROM horario;");

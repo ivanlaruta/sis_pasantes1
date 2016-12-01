@@ -93,7 +93,7 @@ foreach($ver as $fila){
         </td>
         <td>
             
-            <a href="">Eliminar</a>
+            <a href="<?php echo base_url();?>index.php/Horarios/delete">Eliminar</a></td>
         </td>
        
     </tr>

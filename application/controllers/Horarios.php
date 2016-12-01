@@ -24,40 +24,32 @@ class horarios extends CI_Controller {
 	//controlador para añadir
     public function add(){
          
-        //compruebo si se a enviado submit
-        if($this->input->post("submit")){
-         
-        //llamo al metodo add
-        $add=$this->modelohorario->add(
-                $this->input->post("pasante"),
-                $this->input->post("dia"),
-                $this->input->post("hora_inicio"),
-                $this->input->post("hora_fin")
-                );
-        }
-        if($add==true){
-            //Sesion de una sola ejecución
-            $this->session->set_flashdata('correcto', 'Usuario añadido correctamente');
-        }else{
-            $this->session->set_flashdata('incorrecto', 'Usuario añadido correctamente');
-        }
-         
-        //redirecciono la pagina a la url por defecto
-        redirect(base_url());
+        $param['pasante'] = $this -> input -> post('pasante');
+		$param['dia'] =$this -> input -> post('dia');
+		$param['hora_inicio'] =$this -> input -> post('hora_inicio');
+		$param['hora_fin'] =$this -> input -> post('hora_fin');
+		
+
+		$lastId =$this->modelohorario->nuevo_horario($param);
+		if($lastId > 0){
+			$paramusu['id'] = $lastId;
+			$this -> Horario -> guardar($paramusu);
+				echo "<script type='text/javascript'>
+				alert('guardado correcto');
+				</script>";
+
+						$this->load->view('header');
+						$this -> load-> view ('pasante/horarios');
+						$this->load->view('footer');
+		}
     }
      //Controlador para eliminar
-    public function eliminar($id){
-        if(is_numeric($id)){
-          $eliminar=$this->modelohorario->eliminar($id);
-          if($eliminar==true){
-              $this->session->set_flashdata('correcto', 'Usuario eliminado correctamente');
-          }else{
-              $this->session->set_flashdata('incorrecto', 'Usuario eliminado correctamente');
-          }
-          redirect(base_url());
-        }else{
-          redirect(base_url());
-        }
+    public function delete($id)
+    {
+     
+        $this->db->where('id', $id);
+        $this->db->delete('horario');
+        redirect('Horarios/index');
     }
 
 	function mostrar(){
