@@ -51,4 +51,30 @@ class login_model extends CI_Model
 		}
 		
 	}
+
+	public function idpasante ($usuario)
+	{
+		$this->db->select('pa.id_pasante');
+		$this->db->from('persona p , pasante pa');
+		$this->db->where('p.id_persona', 'pa.id_persona');
+		$this->db->where('p.id_persona', $usuario);
+
+
+		$resultados = $this->db->get();
+		if ($resultados->num_rows()==1) {
+			$r = $resultados -> row(); 
+
+			$idpa = array(
+				'idpasante' => $r->id_persona,
+				);
+
+			return $idpa -> result();
+
+		} else {
+			//$this->session->set_flashdata('usuario_incorrecto','Los datos introducidos son incorrectos');
+			//redirect(base_url().'index.php/Principal','refresh');
+			return false;
+		}
+		
+	}
 }

@@ -2,21 +2,24 @@
 <?php
 if (isset($_POST['enviar'])) {
     if (is_array($_POST['ids'])) {
-        $selected = '';
-        $num = count($_POST['ids']);
-        $current = 0;
+       
+       
         foreach ($_POST['ids'] as $key => $value) {
-            if ($current != $num-1)
-                $selected .= $value.', ';
-            else
-                $selected .= $value.'.';
-            $current++;
+            
+            $campos = array(
+            'id_pasante' =>$value ,
+            'id_actividad' =>1,
+           // 'fecha' => ,
+            //'cat_estado_act' =>$param['cat_estado_act'] ,
+            //'id_encargado' =>$param['id_encargado'] ,
+           // 'descripcion' =>$param['descripcion'] 
+            );
+
+            $this ->db->insert('actividad_pasante',$campos);
+            
         }
     }
-    else {
-        $selected = 'Debes seleccionar un pasante';
-    }
-
-    echo '<div>Has seleccionado: '.$selected.'</div>';
+    
+    echo '<div>Has seleccionado: </div>';
 }    
 ?>
