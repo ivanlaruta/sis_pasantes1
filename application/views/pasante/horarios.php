@@ -31,9 +31,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="col-lg-4"></div>
                         <div class="col-lg-4 text-center">
                             <h2>Registro de Horario</h2>
-                            <form class="form-horizontal" role="form" action="<?php echo base_url();?>index.php/Horarios/guardar" method="POST">
+                            <form class="form-horizontal" role="form" action="<?php echo base_url();?>index.php/Horarios/add" method="POST">
                                 <div class="form-group">
-                                    <input type="text" name="pasante" class="form-control" value="Noelia"/>
+                                    <input type="text" name="pasante" class="form-control" value="<?php echo $this->session->userdata('nombre');?>"/>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" name="dia" class="form-control" placeholder="Ingrese Dia  "/>
@@ -71,12 +71,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <th> HORA INICIO</th>
                     <th>HORA FIN</th>
                     <th>OPCION</th>
+                    
                 </tr>
             </thead>
             <tbody>
+            <?php
+foreach($ver as $fila){
+?>
+    <tr>
+        <td>
+            <?=$fila->pasante;?>
+        </td>
+        <td>
+            <?=$fila->dia;?>
+        </td>
+        <td>
+            <?=$fila->hora_inicio;?>
+        </td>
+        <td>
+            <?=$fila->hora_fin;?>
+        </td>
+        <td>
+            
+            <a href="">Eliminar</a>
+        </td>
+       
+    </tr>
             </tbody>
 
-           
+         <?php
+    
+}
+?>  
         </table>
     </div>
 
