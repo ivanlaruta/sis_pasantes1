@@ -30,27 +30,15 @@ class horarios extends CI_Controller {
 		$param['hora_fin'] =$this -> input -> post('hora_fin');
 		
 
-		$lastId =$this->modelohorario->nuevo_horario($param);
-		if($lastId > 0){
-			$paramusu['id'] = $lastId;
-			$this -> Horario -> guardar($paramusu);
-				echo "<script type='text/javascript'>
-				alert('guardado correcto');
-				</script>";
-
-						$this->load->view('header');
-						$this -> load-> view ('pasante/horarios');
-						$this->load->view('footer');
-		}
+		$this->modelohorario->nuevo_horario($param);
+		redirect('horarios');
     }
      //Controlador para eliminar
-    public function delete($id)
-    {
-     
-        $this->db->where('id', $id);
-        $this->db->delete('horario');
-        redirect('Horarios/index');
-    }
+   function delete($id){
+		
+		$this->modelohorario->delete($id);
+		
+	}
 
 	function mostrar(){
 		if ($this->input->is_ajax_request()) {

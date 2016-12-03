@@ -36,7 +36,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <input type="text" name="pasante" class="form-control" value="<?php echo $this->session->userdata('nombre');?>"/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="dia" class="form-control" placeholder="Ingrese Dia  "/>
+                                <select name="dia" class="form-control" >
+<option value="Lunes">Lunes</option>
+<option value="Martes">Martes</option>
+<option value="Miercoles">Miercoles</option>
+<option value="Jueves">Jueves</option>
+<option value="Viernes">Viernes</option>
+</select>
+                                  
                                 </div>
                                 <div class="form-group">
                                     <input type="text" name="hora_inicio" class="form-control" placeholder="Ingrese hora de inicio"/>
@@ -70,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <th>DIA</th>
                     <th> HORA INICIO</th>
                     <th>HORA FIN</th>
-                    <th>OPCION</th>
+                    <th colspan="2">OPCION</th>
                     
                 </tr>
             </thead>
@@ -92,10 +99,15 @@ foreach($ver as $fila){
             <?=$fila->hora_fin;?>
         </td>
         <td>
-            
+           
             <a href="<?php echo base_url();?>index.php/Horarios/delete">Eliminar</a></td>
+            
         </td>
-       
+       <td>
+            
+           
+            <a href="<?php echo base_url();?>index.php/Horarios/update">Actualizar</a></td>
+        </td>
     </tr>
             </tbody>
 

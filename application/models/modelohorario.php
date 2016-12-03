@@ -24,31 +24,17 @@ class modelohorario extends CI_Model {
 		
     }
 	public function ver(){
-        //Hacemos una consulta
+       
         $consulta=$this->db->query("SELECT * FROM horario;");
-         
-        //Devolvemos el resultado de la consulta
+     
         return $consulta->result();
     }
     
         
-	function actualizar($id,$data){
-		$this->db->where('id_empleado', $id);
-		$this->db->update('empleados', $data); 
-		if ($this->db->affected_rows() > 0) {
-			return true;
-		}
-		else{
-			return false;
-		}
-	}
+	
 
-	 public function eliminar($id){
-       $consulta=$this->db->query("DELETE FROM horario WHERE id=$id");
-       if($consulta==true){
-           return true;
-       }else{
-           return false;
-       }
-    }
+	 function delete($id){
+		$this->db->where($this->primary_key,$id);
+		$this->db->delete($this->pasante);
+	}
 }
