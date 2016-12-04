@@ -47,6 +47,6 @@
 </div>
 
 <div align="center">
-	<a href="<?php echo base_url();?>index.php/Jefe" class="btn btn-primary" style='width:160px'>aceptar</a>
+	<a href="<?php echo base_url();?>index.php/Pasante" class="btn btn-primary" style='width:160px'>aceptar</a>
 </div>
 </body>
