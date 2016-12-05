@@ -162,7 +162,7 @@ class RegistroPasante extends CI_Controller
 		} 
 
 			$this->load->view('header');
-			$this -> load-> view ('encargado/encargado');
+			$this -> load-> view ('encargado/registroPasante');
 			$this->load->view('footer');
 		
 	}
