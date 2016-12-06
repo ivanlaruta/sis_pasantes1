@@ -68,17 +68,20 @@ class mPasante extends CI_Model
 
 	public function listarTareas3($identificador){
 
-		$this->db->select('ap.id_actividad, ap.fecha_inicio, ap.id_encargado, a.actividad');
+		$this->db->select('ap.id_actividad, a.actividad, ap.fecha_inicio');
 		$this->db->from('actividad_pasante ap');
 		$this->db->join('pasante p','ap.id_pasante = p.id_pasante');
 		$this->db->join('actividad a', 'ap.id_actividad = a.id_actividad');
 		$this->db->where('p.id_pasante', $identificador);
-
+		//$this->db->where($identificador, $this->session->userdata('idusuario'));
+		//$this->session->set_userdata('idusuario', $identificador);
 
 		
 		$resultados = $this->db->get();
 		if ($resultados->num_rows()>0) {
 			return $resultados -> result();
+
+			//redirect('controlEliminarPasante');
 		}
 	}
 

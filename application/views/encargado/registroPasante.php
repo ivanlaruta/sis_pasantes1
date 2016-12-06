@@ -1,6 +1,10 @@
-<body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>	
+<body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>
+<div class="error">
+	<?php echo validation_errors(); ?>
+</div>	
 	 	
-	<form action="<?php echo base_url();?>index.php/registroPasante/guardar" method="POST">
+	<form action="<?php echo base_url();?>index.php/registroPasante/nuevo_pasante" method="POST">
+
 		<div align="center">
 			<table >
 				<tr>
@@ -10,54 +14,54 @@
 				</tr>
 				<tr>
 					<td><label>C.I.</label></td>
-					<td><input type="text" class="form-control" name="carnet_identidad" maxlength="8"></td>
+					<td><input type="text" class="form-control" name="carnet_identidad" value="<?php echo set_value('carnet_identidad');?>" ></td>
 				</tr>
 				
 				<tr>
 					<td><label>Nombres</label></td>
-					<td><input type="text" class="form-control" name="nombres"></td>
+					<td><input type="text" class="form-control" name="nombres" value="<?php echo set_value('nombres');?>"></td>
 				</tr>
 				
 				<tr>
 					<td><label>Apellidos</label></td>
-					<td><input type="text" class="form-control" name="apellidos"></td>
+					<td><input type="text" class="form-control" name="apellidos" value="<?php echo set_value('apellidos');?>"></td>
 				</tr>
 
 				<tr>
 					<td><label>Direccion</label></td>
-					<td><input type="text" class="form-control" name="direccion"></td>
+					<td><input type="text" class="form-control" name="direccion" value="<?php echo set_value('direccion');?>"></td>
 				</tr>
 
 				<tr>
 					<td><label>Telefono</label></td>
-					<td><input type="text" class="form-control" name="telefono"></td>
+					<td><input type="text" class="form-control" name="telefono" value="<?php echo set_value('telefono');?>"></td>
 				</tr>
 
 				<tr>
 					<td><label>Correo</label></td>
-					<td><input type="text" class="form-control" name="email"></td>
+					<td><input type="text" class="form-control" name="email" value="<?php echo set_value('email');?>"></td>
 				</tr>
 
 				<tr>
 					<td><label>fecha de nacimiento</label></td>
-					<td><input type="date" class="form-control" name="fecha_nacimiento"></td>
+					<td><input type="date" class="form-control" name="fecha_nacimiento" value="<?php echo set_value('fecha_nacimiento');?>"></td>
 				</tr>
 
 				<tr>
 					<td><label>Usuario</label></td>
-					<td><input type="text" class="form-control" name="usuario"></td>
+					<td><input type="text" class="form-control" name="usuario" value="<?php echo set_value('usuario');?>"></td>
 				</tr>
 
 				<tr>
-					<td><label>password</label></td>
-					<td><input type="password" class="form-control" name="password"></td>
+					<td><label>Password</label></td>
+					<td><input type="password" class="form-control" name="password" value="<?php echo set_value('password');?>"></td>
 				</tr>
 
 				
 				<tr>
 					<td><label>Carrera</label></td>
 					<td>
-                     <select name="cat_carrera">
+                     <select name="cat_carrera" value="<?php echo set_value('cat_carrera');?>">
                                 <?php 
                                     
                                     foreach ($resultado as $row) {

@@ -13,7 +13,7 @@
 			<tr>
 				<td height="60">
 					
-					<a href="<?php echo base_url(); ?>index.php/controlListaTareaPasante/listar( <?php echo $this->session->userdata('idusuario');?>)" class="btn btn-primary" style='width:150px'>   Registrar Tareas</a>
+					<a href="<?php echo base_url(); ?>index.php/controlListaTareaPasante/listar" class="btn btn-primary" style='width:150px'>   Registrar Tareas</a>
 				</td>				<td>
 					Registrar Tareas Realizadas
 				</td>
