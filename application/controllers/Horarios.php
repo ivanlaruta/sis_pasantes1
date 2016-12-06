@@ -34,9 +34,10 @@ class horarios extends CI_Controller {
 		redirect('horarios');
     }
      //Controlador para eliminar
-   function delete($id){
-		
-		$this->modelohorario->delete($id);
+   function delete(){
+	$id = $this->uri->segment(3);
+		$delete = $this->modelohorario->delete($id);
+		redirect('horarios');
 		
 	}
 

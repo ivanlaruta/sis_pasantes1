@@ -10,7 +10,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <title>Horario Pasante</title>
     <link rel="stylesheet" href="<?php echo base_url();?>bootstrap/css/bootstrap.min.css">
-    
+   <script type="text/javascript">
+function confirma(){
+    if (confirm("¿Realmente desea eliminarlo?")){ 
+        alert("El registro ha sido eliminado.") }
+        else { 
+        return false
+    }
+}
+</script>
 </head>
 <body>
 
@@ -46,6 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                   
                                 </div>
                                 <div class="form-group">
+                                   
                                     <input type="text" name="hora_inicio" class="form-control" placeholder="Ingrese hora de inicio"/>
                                 </div>
                                 <div class="form-group">
@@ -99,8 +108,8 @@ foreach($ver as $fila){
             <?=$fila->hora_fin;?>
         </td>
         <td>
-           
-            <a href="<?php echo base_url();?>index.php/Horarios/delete">Eliminar</a></td>
+ 
+            <a onclick="if(confirma() == false) return false" href="<?php echo base_url();?>index.php/Horarios/delete/<?=$fila->id?>">Eliminar</a></td>
             
         </td>
        <td>

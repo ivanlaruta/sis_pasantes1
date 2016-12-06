@@ -34,7 +34,7 @@ class modelohorario extends CI_Model {
 	
 
 	 function delete($id){
-		$this->db->where($this->primary_key,$id);
-		$this->db->delete($this->pasante);
+		$this->db->where('id',$id);
+		return $this->db->delete('horario');
 	}
 }
