@@ -13,8 +13,10 @@
 					</td>
 				</tr>
 				<tr>
+				<? php echo form_error('nombre');?>
 					<td><label>C.I.</label></td>
 					<td><input type="text" class="form-control" name="carnet_identidad" value="<?php echo set_value('carnet_identidad');?>" ></td>
+					
 				</tr>
 				
 				<tr>

@@ -122,12 +122,12 @@ class RegistroPasante extends CI_Controller
 		$this->form_validation->set_rules('carnet_identidad', 'carnet_identidad', 'required|min_length[5]|max_length[12]');
 		$this->form_validation->set_rules('nombres', 'nombres', 'required|min_length[5]|max_length[12]');
 		$this->form_validation->set_rules('apellidos', 'apellidos', 'required|min_length[5]|max_length[12]');
-		$this->form_validation->set_rules('direccion', 'direccion', 'required|min_length[5]|max_length[12]');
+		$this->form_validation->set_rules('direccion', 'direccion',  'required|min_length[5]|max_length[12]');
 		$this->form_validation->set_rules('telefono', 'telefono', 'required|min_length[5]|max_length[12]');
-		$this->form_validation->set_rules('email', 'email', 'required|min_length[5]|max_length[12]');
+		$this->form_validation->set_rules('email', 'email', 'required|valid_email');
 		$this->form_validation->set_rules('fecha_nacimiento', 'fecha_nacimiento', 'required|min_length[5]|max_length[12]');
 		$this->form_validation->set_rules('usuario', 'usuario', 'required|min_length[5]|max_length[12]');
-		$this->form_validation->set_rules('password', 'password', 'required|min_length[5]|max_length[12]');
+		$this->form_validation->set_rules('password', 'password', 'password', 'required');
 		$this->form_validation->set_rules('cat_carrera', 'cat_carrera', 'required|min_length[5]|max_length[12]');
 
 		if ($this->form_validation->run() === true) {

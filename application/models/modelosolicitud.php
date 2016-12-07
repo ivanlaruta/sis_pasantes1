@@ -27,6 +27,26 @@ htmlspecialchars($row->cat_tipo_permiso, ENT_QUOTES);
         return $arrDatos;
      }
 }
+
+
+public function listarSolicitudes($identificador){
+
+        $this->db->select('p.id_permiso, pe.nombres, p.fecha_solicitud, p.descripcion, p.fecha_actual');
+        $this->db->from('permiso p');
+        $this->db->join('pasante pa','p.id_pasante = pa.id_pasante');
+        $this->db->join('persona pe', 'pe.id_persona = pa.id_persona');
+        $this->db->where('pe.id_persona', $identificador);
+        //$this->db->where($identificador, $this->session->userdata('idusuario'));
+        //$this->session->set_userdata('idusuario', $identificador);
+
+        
+        $resultados = $this->db->get();
+        if ($resultados->num_rows()>0) {
+            return $resultados -> result();
+
+            //redirect('controlEliminarPasante');
+        }
+    }
 }
 
 ?>
