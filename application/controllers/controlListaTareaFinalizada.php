@@ -1,7 +1,7 @@
 <?php
 
 
-class controlListaTareaPasante extends CI_Controller {
+class controlListaTareaFinalizada extends CI_Controller {
 
 	function __construct()
 	{
@@ -37,7 +37,7 @@ class controlListaTareaPasante extends CI_Controller {
 
 
 		$this->load->view('header');
-		$this->load->view('pasante/listaTareasPendientes',$data,FALSE);
+		$this->load->view('pasante/listaTareasFinalizadas',$data,FALSE);
 		$this->load->view('footer');
 	}
 }

@@ -21,7 +21,7 @@
 
 			<tr>
 				<td height="60">
-					<a href="" class="btn btn-primary" style='width:150px'>Lista de tareas</a>
+					<a href="<?php echo base_url(); ?>index.php/controlListaTareaFinalizada/listar" class="btn btn-primary" style='width:150px'>Lista de tareas</a>
 				</td>
 
 				<td>
