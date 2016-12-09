@@ -1,115 +1,83 @@
-<body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>		 	
-	<form action="<?php echo base_url();?>index.php/controlAsignacionHorario" method="POST">
-		<div align="center">
-			<table border="0">
-				<tr>
-					<td colspan="2">
-						<center><h3>Asignacion de horarios</h3></center>
-					</td>
-				</tr>
-			</table>				
-		</div>
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-			<div align="center">
-				<div class="container">
-				  <table class="table table-bordered">
-				    <thead>
-				      <tr>
-				      	<th>Horas</th> 
-				        <th>Lunes</th>        
-				        <th>Martes</th>
-				        <th>Miercoles</th>
-				        <th>Jueves</th>
-				        <th>Viernes</th>
-				      </tr>
-				    </thead>
+    <title>Horario Pasante</title>
+    <link rel="stylesheet" href="<?php echo base_url();?>bootstrap/css/bootstrap.min.css">
+ 
+</head>
+<body>
 
-				    <tbody>
-				      	<td>8:30-9:30</td>        
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>				      	
-				    </tbody>
 
-				    <tbody>
-				      	<td>8:30-9:30</td>        
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>			      
-				    </tbody>
+    
+    <div class="container">
+        
+        <section class="contenido">
+            <div class="row">
 
-				    <tbody>
-				      	<td>9:30-10:30</td>        
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>				      	
-				    </tbody>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab1" data-toggle="tab">Registrar</a></li>
+                    <li><a id="tab-consultar" href="#tab2" data-toggle="tab">Consultar</a></li>
+                </ul>
+               
+                <div class="tab-content">
+                    <div class="tab-pane  active" id="tab1">
+                        <div class="col-lg-4"></div>
+                       
+                    </div>
 
-				    <tbody>
-				      	<td>10:30-11:30</td>        
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>		      	
-				    </tbody>
+                    <div class="tab-pane fade" id="tab2">
 
-				    <tbody>
-				      	<td>11:30-12:30</td>        
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>			     
-				    </tbody>
+                        <div class="row">
+                            <br>
+                            <div class="col-lg-7"></div>
+                            <div class="container">
+        <h1 style="font-size:20pt">HORARIO PASANTE</h1>
 
-				    <tbody>
-				      	<td>16:30-17:30</td>        
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>			     
-				    </tbody>
+        <br />
+        <br />
+        <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>PASANTE</th>
+                   <th colspan="2">OPCION</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+         
+            </tbody>
 
-				    <tbody>
-				      	<td>17:30-18:30</td>        
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>			      
-				    </tbody>
+        </table>
+    </div>
 
-				    <tbody>
-				      	<td>18:30-19:30</td>          
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>	     
-				    </tbody>
+                        </div>
+                        <hr>
+                    
 
-				    <tbody>
-				      	<td>19:30-20:30</td>              
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>
-				      	<td><input type="checkbox" name="" value=""></td>			      
-				    </tbody>			
-				    
-				  </table>
-				  
-				</div>
-				<input type="submit" value="Aceptar" class="btn btn-primary" >
-				<input type="submit" value="Cancelar" class="btn btn-primary">
-			</div>
-	</form>
+                    </div>
+
+                </div>
+                
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+ 
+<script src="<?php echo base_url();?>assets/js/jquery-1.11.3.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/empleado.js"></script>
 </body>
+</html>
+</body>
+</html>
