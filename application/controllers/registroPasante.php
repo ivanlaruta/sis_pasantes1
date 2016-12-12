@@ -69,25 +69,25 @@ class RegistroPasante extends CI_Controller
 
 				'field' => 'nombres',
 				'label' => 'Nombres',
-				'rules' => 'required|min_length[15]|max_length[20]|alpha'
+				'rules' => 'required|max_length[20]|'
 			),
 
 			array(
 				'field' => 'apellidos',
 				'label' => 'Apellidos',
-				'rules' => 'required'
+				'rules' => 'required|max_length[25]'
 			),
 
 			array(
 				'field' => 'direccion',
 				'label' => 'Direccion',
-				'rules' => 'required'
+				'rules' => 'required|max_length[20]'
 			),
 
 			array(
 				'field' => 'telefono',
 				'label' => 'Telefono',
-				'rules' => 'required'
+				'rules' => 'required|min_length[7]|max_length[8]|integer'
 			),
 
 			array(
@@ -105,7 +105,7 @@ class RegistroPasante extends CI_Controller
 			array(
 				'field' => 'usuario',
 				'label' => 'Usuario',
-				'rules' => 'required'
+				'rules' => 'required|min_length[5]|max_length[10]|alpha'
 			),
 
 			array(

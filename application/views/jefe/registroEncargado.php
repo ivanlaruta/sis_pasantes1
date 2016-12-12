@@ -1,4 +1,7 @@
-<body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>	
+<body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>
+<div class="error">
+	<?php echo validation_errors(); ?>
+</div>	
 	 	
 	<form action="<?php echo base_url();?>index.php/registroEncargado/guardar" method="POST">
 		<div align="center">
