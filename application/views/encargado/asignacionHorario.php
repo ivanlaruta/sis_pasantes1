@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <title>Horario Pasante</title>
     <link rel="stylesheet" href="<?php echo base_url();?>bootstrap/css/bootstrap.min.css">
- 
+   
 </head>
 <body>
 
@@ -21,19 +21,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <section class="contenido">
             <div class="row">
 
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#tab1" data-toggle="tab">Registrar</a></li>
-                    <li><a id="tab-consultar" href="#tab2" data-toggle="tab">Consultar</a></li>
-                </ul>
-               
-                <div class="tab-content">
-                    <div class="tab-pane  active" id="tab1">
-                        <div class="col-lg-4"></div>
-                       
-                    </div>
-
-                    <div class="tab-pane fade" id="tab2">
-
+               <div class="pull-right" style="padding-top:30px">
+            <div class="box-tools" style="display:inline-table">
+              <div class="input-group">
+                  <input type="text" class="form-control input-sm ng-valid ng-dirty" placeholder="Search" ng-change="searchDB()" ng-model="searchText" name="table_search" title="" tooltip="" data-original-title="Min character length is 3">
+                  <span class="input-group-addon">Search</span>
+              </div>
+            </div>
+        
+        </div>
                         <div class="row">
                             <br>
                             <div class="col-lg-7"></div>
@@ -46,15 +42,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <thead>
                 <tr>
                     <th>PASANTE</th>
-                   <th colspan="2">OPCION</th>
+                   
+                    <th>DIA</th>
+                    <th> HORA INICIO</th>
+                    <th>HORA FIN</th>
+                  
                     
                 </tr>
             </thead>
             <tbody>
-         
+            <?php
+foreach($results as $data){
+?>
+    <tr>
+        <td>
+            <?=$data->pasante;?>
+        </td>
+        <td>
+            <?=$data->dia;?>
+        </td>
+        <td>
+            <?=$data->hora_inicio;?>
+        </td>
+        <td>
+            <?=$data->hora_fin;?>
+        </td>
+        
+    </tr>
+    
             </tbody>
 
+         <?php
+    
+}
+?>  
         </table>
+        <div style="text-align:center"><?php echo $links; ?></div>
     </div>
 
                         </div>
