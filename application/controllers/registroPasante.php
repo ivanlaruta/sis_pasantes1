@@ -3,6 +3,9 @@
 * 
 */
 class RegistroPasante extends CI_Controller
+
+
+
 {
 	function __construct()
 	{
@@ -52,83 +55,91 @@ class RegistroPasante extends CI_Controller
 	#	}
 	#}
 
-	public function nuevo_pasante(){
+	function validar(){
 
-		#$rules = array(
-		#	array(
-		#		'field' => 'carnet_identidad',
-		#		'label' => 'C.I.',
-		#		'rules' => 'required'
-		#	),
+		$rules = array(
+			array(
 
-		#	array(
-		#		'field' => 'nombres',
-		#		'label' => 'Nombres',
-		#		'rules' => 'required'
-		#	),
+				'field' => 'carnet_identidad',
+				'label' => 'C.I.',
+				'rules' => 'required|exact_length[7]|integer'
+			),
 
-		#	array(
-		#		'field' => 'apellidos',
-		#		'label' => 'Apellidos',
-		#		'rules' => 'required'
-		#	),
+			array(
 
-		#	array(
-		#		'field' => 'direccion',
-		#		'label' => 'Direccion',
-		#		'rules' => 'required'
-		#	),
+				'field' => 'nombres',
+				'label' => 'Nombres',
+				'rules' => 'required|min_length[15]|max_length[20]|alpha'
+			),
 
-		#	array(
-		#		'field' => 'telefono',
-		#		'label' => 'Telefono',
-		#		'rules' => 'required'
-		#	),
+			array(
+				'field' => 'apellidos',
+				'label' => 'Apellidos',
+				'rules' => 'required'
+			),
 
-		#	array(
-		#		'field' => 'email',
-		#		'label' => 'Correo',
-		#		'rules' => 'required'
-		#	),
+			array(
+				'field' => 'direccion',
+				'label' => 'Direccion',
+				'rules' => 'required'
+			),
 
-		#	array(
-		#		'field' => 'fecha_nacimiento',
-		#		'label' => 'fecha de nacimiento',
-		#		'rules' => 'required'
-		#	),
+			array(
+				'field' => 'telefono',
+				'label' => 'Telefono',
+				'rules' => 'required'
+			),
 
-		#	array(
-		#		'field' => 'usuario',
-		#		'label' => 'Usuario',
-		#		'rules' => 'required'
-		#	),
+			array(
+				'field' => 'email',
+				'label' => 'Correo',
+				'rules' => 'required|valid_email'
+			),
 
-		#	array(
-		#		'field' => 'password',
-		#		'label' => 'Password',
-		#		'rules' => 'required'
-		#	),
+			array(
+				'field' => 'fecha_nacimiento',
+				'label' => 'fecha de nacimiento',
+				'rules' => 'required'
+			),
 
-		#	array(
-		#		'field' => 'cat_carrera',
-		#		'label' => 'Carrera',
-		#		'rules' => 'required'
-		#	)
-		#);
+			array(
+				'field' => 'usuario',
+				'label' => 'Usuario',
+				'rules' => 'required'
+			),
 
-		#$this->form_validation->set_rules($rules);
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('carnet_identidad', 'carnet_identidad', 'required|min_length[5]|max_length[12]');
-		$this->form_validation->set_rules('nombres', 'nombres', 'required|min_length[5]|max_length[12]|alphaNumeric');
-		$this->form_validation->set_rules('apellidos', 'apellidos', 'required|min_length[5]|max_length[12]');
-		$this->form_validation->set_rules('direccion', 'direccion',  'required|min_length[5]|max_length[12]');
-		$this->form_validation->set_rules('telefono', 'telefono', 'required|min_length[5]|max_length[12]');
-		$this->form_validation->set_rules('email', 'email', 'required|valid_email');
-		$this->form_validation->set_rules('fecha_nacimiento', 'fecha de nacimiento', 'required|min_length[5]|max_length[12]');
-		$this->form_validation->set_rules('usuario', 'usuario', 'required|min_length[5]|max_length[12]');
-		$this->form_validation->set_rules('password', 'password', 'password', 'required');
-		$this->form_validation->set_rules('cat_carrera', 'cat_carrera', 'required|min_length[5]|max_length[12]');
+			array(
+				'field' => 'password',
+				'label' => 'Password',
+				'rules' => 'required'
+			),
+
+			array(
+				'field' => 'cat_carrera',
+				'label' => 'Carrera',
+				'rules' => 'required'
+			)
+
+
+	);
+
+		$this->form_validation->set_error_delimiters('<div style="color:Red">','</div>');
+
+		$this->form_validation->set_rules($rules);
+
+		//$this->load->helper('form');
+		//$this->load->library('form_validation');
+		//$this->form_validation->set_rules('carnet_identidad', 'carnet_identidad', 'required|min_length[5]|max_length[12]');
+		//$this->form_validation->set_message('required', 'El campo %s es obligatorio');
+		//$this->form_validation->set_rules('nombres', 'nombres', 'required|min_length[5]|max_length[12]|alphaNumeric');
+		//$this->form_validation->set_rules('apellidos', 'apellidos', 'required|min_length[5]|max_length[12]');
+		//$this->form_validation->set_rules('direccion', 'direccion',  'required|min_length[5]|max_length[12]');
+		//$this->form_validation->set_rules('telefono', 'telefono', 'required|min_length[5]|max_length[12]');
+		//$this->form_validation->set_rules('email', 'email', 'required|valid_email');
+		//$this->form_validation->set_rules('fecha_nacimiento', 'fecha de nacimiento', 'required|min_length[5]|max_length[12]');
+		//$this->form_validation->set_rules('usuario', 'usuario', 'required|min_length[5]|max_length[12]');
+		//$this->form_validation->set_rules('password', 'password', 'password', 'required');
+		//$this->form_validation->set_rules('cat_carrera', 'cat_carrera', 'required|min_length[5]|max_length[12]');
 
 		if ($this->form_validation->run() === true) {
 			
@@ -167,3 +178,6 @@ class RegistroPasante extends CI_Controller
 		
 	}
 }
+
+
+
