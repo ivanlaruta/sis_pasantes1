@@ -53,4 +53,25 @@ class Datospersonales extends CI_Controller {
 		$this->load->view('pasante/datospersonales', $data);
 		$this->load->view('footer');	
 	}
+
+	public function actualizar(){
+		#$this->load->model('registrarPasante');
+		#$this->registrarPasante->actualizar();
+		#$this->index();
+
+		$session_data = $this->session->userdata('idusuario');
+
+		//echo '<pre>';
+		//print_r($session_data);
+		//$ide = $this->session->userdata('idusuario');
+		//echo $ide;
+		$this ->load->model('registrarPasante');
+		$data = array();
+		$data["actualizar"] = $this -> registrarPasante -> actualizar($session_data);
+
+
+		$this->load->view('header');
+		$this->load->view('pasante/listaTareasFinalizadas',$data,FALSE);
+		$this->load->view('footer');
+	}
 }

@@ -54,7 +54,7 @@
 				</tr>
 
 				<tr>
-					<td><input type="submit" value="Guardar" class="btn btn-primary" ></td>
+					<td><a href="<?php echo base_url();?>index.php/Datospersonales/actualizar" class="btn btn-primary" style='width:160px'>Editar</a></td>
 					<td><input type="submit" value="Cancelar" class="btn btn-primary"></td>
 										
 				</tr>
