@@ -25,26 +25,26 @@ class RegistroEncargado extends CI_Controller
 
 				'field' => 'carnet_identidad',
 				'label' => 'C.I.',
-				'rules' => 'required|exact_length[7]|integer'
+				'rules' => 'required|integer'
 			),
 
 			array(
 
 				'field' => 'nombres',
 				'label' => 'Nombres',
-				'rules' => 'required|min_length[15]|max_length[20]|alpha'
+				'rules' => 'required|alpha'
 			),
 
 			array(
 				'field' => 'apellidos',
 				'label' => 'Apellidos',
-				'rules' => 'required|min_length[15]|max_length[20]'
+				'rules' => 'required|max_length[25]|alpha'
 			),
 
 			array(
 				'field' => 'direccion',
 				'label' => 'Direccion',
-				'rules' => 'required|min_length[15]|max_length[20]'
+				'rules' => 'required'
 			),
 
 			array(
@@ -68,19 +68,13 @@ class RegistroEncargado extends CI_Controller
 			array(
 				'field' => 'usuario',
 				'label' => 'Usuario',
-				'rules' => 'required|min_length[5]|max_length[10]|alpha'
+				'rules' => 'required|alpha'
 			),
 
 			array(
 				'field' => 'password',
 				'label' => 'Password',
-				'rules' => 'required'
-			),
-
-			array(
-				'field' => 'cat_carrera',
-				'label' => 'Carrera',
-				'rules' => 'required'
+				'rules' => 'required|alpha_numeric'
 			),
 
 			array(
