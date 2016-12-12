@@ -31,7 +31,7 @@
 				<?php  foreach ($resultado as $row) { ?>
                                             <tr> 
                                             	<td>
-                                            	<?php echo $row->id_persona;?>
+                                            	<?php echo $row->id_pasante;?>
                                             	</td>
                                                 <td>
                                             	<?php echo $row->nombres;?>

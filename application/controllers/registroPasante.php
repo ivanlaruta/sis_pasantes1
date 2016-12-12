@@ -69,7 +69,7 @@ class RegistroPasante extends CI_Controller
 
 				'field' => 'nombres',
 				'label' => 'Nombres',
-				'rules' => 'required|max_length[20]|'
+				'rules' => 'required'
 			),
 
 			array(
@@ -165,17 +165,22 @@ class RegistroPasante extends CI_Controller
 					alert('guardado correcto');
 					</script>";
 
-							$this->load->view('header');
-							$this -> load-> view ('encargado/registroPasante');
-							$this->load->view('footer');
+					$this->load->view('header');
+		$this->load->view('encargado/controlPasantes');
+		$this->load->view('footer');
+							
 			}
 
 		} 
-
-			$this->load->view('header');
-			$this -> load-> view ('encargado/registroPasante');
-			$this->load->view('footer');
-		
+		else
+		{
+		$datos['resultado'] = $this->mCatalogo->listarCarreras();
+		$this->load->helper('form');
+		$this->load->view('header');
+		$this -> load-> view ('encargado/RegistroPasante', $datos);
+		//$this -> load-> view ('encargado/RegistroPasante');
+		$this->load->view('footer');
+		}
 	}
 }
 
