@@ -10,30 +10,28 @@ class controlAsignacionHorario extends CI_Controller {
 	    $this->load->library("pagination");
 	}
 
-	function index()
+	public function index($offset=0){
+  
+  $config['total_rows'] = $this->asignacionhorarios->total();
+  
+  $config['base_url'] = base_url()."index.php/controlAsignacionHorario";
+  $config['per_page'] = 4;
+  $config['uri_segment'] = '4';
 
-	{
+  
+  $this->pagination->initialize($config);
+   
 
-        
-       
-		$config["base_url"] = base_url().'controlAsignacionHorario/index/';
+  $query = $this->asignacionhorarios->gethorario(4,$this->uri->segment(4));
 
-		$config["total_rows"] = $this->asignacionhorarios->record_count();
-		$config["per_page"] = 4;
-		$config["uri_segment"] = 2;
- 
-		$this->pagination->initialize($config);
- 
-		$page = ($this->uri->segment(2))? $this->uri->segment(2) : 0;
-		$data["results"] = $this->asignacionhorarios
-			->get_horario($config["per_page"], $page);
-		$data["links"] = $this->pagination->create_links();
- 
-		
-        //array asociativo con la llamada al metodo
-        //del modelo
-       // $usuarios["ver"]=$this->asignacionhorarios->ver();
-         
+  
+  $data['result'] = null;
+  
+  if($query){
+   $data['result'] =  $query;
+  }
+
+  
        
 		$this->load->view('header');
 		$this->load->view('encargado/asignacionHorario',$data);
@@ -73,7 +71,23 @@ class controlAsignacionHorario extends CI_Controller {
 			show_404();
 		}
 	}
-
+function display_info(){
+		$this->load->model('asignacionhorarios');
+		
+		$data['results'] = $this->asignacionhorarios->get_info();
+		
+		$this->load->view('encargado/view_info', $data);
+	}
+	function search_name(){
+		if(isset($_GET['name'])){
+			$name=$_GET['name'];
+		}
+		$this->load->model('asignacionhorarios');
+		
+		$data['results'] = $this->asignacionhorarios->searchbyname($name);
+		
+		$this->load->view('encargado/view_info', $data);
+	}
 	
 
 	

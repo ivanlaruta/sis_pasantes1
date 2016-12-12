@@ -52,20 +52,25 @@ class asignacionhorarios extends CI_Model {
         $this->db->where('id', $id);
         return $this->db->update('horario', $data);
     }
-        public function record_count() {
-        return $this->db->count_all("horario");
+
+
+     function gethorario($limit=null,$offset=NULL){
+  $this->db->select("*");
+  $this->db->from('horario');
+  $this->db->limit($limit, $offset);
+  $query = $this->db->get();
+  return $query->result();
+ }
+
+ function total(){
+  return $this->db->count_all_results('horario');
+ }
+ function get_info(){
+        $query = $this->db->query("SELECT * FROM horario");
+        return $query->result();
     }
- 
-    public function get_horario($limit, $start) {
-        $this->db->limit($limit, $start);
-        $query = $this->db->get("horario");
- 
-        if ($query->num_rows() > 0) {
-            foreach ($query->result() as $row) {
-                $data[] = $row;
-            }
-            return $data;
-        }
-        return false;
-   }
+    function searchbyname($name){
+        $query = $this->db->query("SELECT * FROM horario WHERE pasante LIKE ('$name%')");
+        return $query->result();
+    }
 }
