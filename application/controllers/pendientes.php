@@ -2,26 +2,26 @@
 /**
 * 
 */
-class ListaPasantes extends CI_Controller
+class Pendientes extends CI_Controller
 {
 	function __construct()
 	{
 		parent:: __construct();
 
 		$this ->load-> model('mTarea');
-		$this ->load-> model('mPasante');
+		$this ->load-> model('mPendientes');
 		//$this -> load -> model('registrarPasante');
-		$this -> load->library('encrypt');
+		$this ->load->library('encrypt');
 	
 
 	}
 
 	public function index(){
 
-	$datos['resultado'] = $this->mPasante->listarPasantes();
+	$datos['resultado'] = $this->mPendientes->listarsolicitudes();
     
 		$this->load->view('header');
-		$this ->load->view ('encargado/listaPasantes', $datos);
+		$this ->load->view ('encargado/pendientes');
 		$this->load->view('footer');
 	}
 

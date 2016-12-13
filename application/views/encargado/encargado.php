@@ -67,7 +67,7 @@
 
 			<tr>
 				<td height="60">
-					<a href="<?php echo base_url(); ?>index.php/controlListaSolicitudesEncargado/listar" class="btn btn-primary" style='width:170px'>Solicitudes Pendientes</a>
+					<a href="<?php echo base_url(); ?>index.php/pendientes" class="btn btn-primary" style='width:170px'>Solicitudes Pendientes</a>
 				</td>
 
 				<td>
