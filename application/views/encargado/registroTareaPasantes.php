@@ -4,17 +4,40 @@
 		
 		<div align="center">
 			<table border="0">
-			<tr>
+			
+
+				<tr>
 					<td colspan="2">
-						<center><h4>Asignacion de pasantes</h4></center>
+						
+						<input type="hidden" name="idtarea"  value="<?php echo $idtareas;?>"  />
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2">
-						<center><h5>Porfavor seleccione a los pasantes para la tarea.</h5></center>
+						
+						
+
+						   
 					</td>
 				</tr>
 
+					<tr>
+					<td colspan="2">
+						<center><h4>Asignacion de pasantes</h4></center>
+					</td>
+					
+				</tr>
+
+
+
+				<tr>
+					<td colspan="2">
+						<center><h5>Porfavor seleccione a los pasantes para la tarea.</h5></center>
+					</td>
+
+				</tr>
+
+				
 			</table>
 			</div>
 		

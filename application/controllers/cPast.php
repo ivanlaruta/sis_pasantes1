@@ -8,6 +8,7 @@ class cPast extends CI_Controller
     {
         parent:: __construct();
         $this -> load -> model('mTareaPasante');
+        $this -> load -> model('mEncargado');
         $this -> load->library('encrypt');
     }
 
@@ -19,7 +20,7 @@ class cPast extends CI_Controller
 
     public function guardar()
     {
-
+        date_default_timezone_set('America/La_Paz');
         if (isset($_POST['enviar'])) {
          if (is_array($_POST['ids'])) {
             $selected = '';
@@ -36,17 +37,19 @@ class cPast extends CI_Controller
 
 
                 $param['id_pasante'] = $value;
-                $param['id_actividad'] =75;
-                $param['fecha'] ="2016-12-01";
-                $param['cat_estado_act'] ="PEN";
-                $param['id_encargado'] =1;
-                $param['descripcion'] ="hola hola hola";
+                $param['id_actividad'] =$_POST['idtarea'];
+                $param['fecha'] =date('Y-m-d'); 
+                $param['cat_estado_act'] ="PENDIENTE";
+                $param['id_encargado'] = 1;
+               
                
                  $this->mTareaPasante->guardar($param);
-               $this->load->view('header');
-        $this->load->view('encargado/controlPasantes');
-        $this->load->view('footer');
+                
             }
+            
+            $this->load->view('header');
+            $this->load->view('encargado/controlPasantes');
+            $this->load->view('footer');
         }
         else {
             $selected = 'Debes seleccionar un pasante';
