@@ -28,6 +28,20 @@ class mEncargado extends CI_Model
 		}
 		return FALSE;
 	}
+	public function listarEncargado ($id)
+	{
+		$this->db->select('pa.id_encargado,pe.nombres,pe.apellidos');
+		$this->db->from('persona pe ,encargado pa');
+		$this->db->where('pe.id_persona = pa.id_persona');
+		$this->db->where('pa.id_persona',$id);		
+
+		$resultado = $this->db->get();
+		
+		if ($resultado->num_rows()>0) {
+			return $resultado -> result();
+		}
+		return FALSE;
+	}
 
 	public function guardarEncargados($param)
 	{

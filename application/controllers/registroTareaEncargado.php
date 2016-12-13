@@ -34,7 +34,7 @@ class RegistroTareaEncargado extends CI_Controller
 		$data["listarPasantes"] = $this -> mPasante -> listarPasantes();
 
 		$this->load->view('header');
-		$this->load->view('encargado/AsignarTareaPasantes',$data,FALSE);
+		$this->load->view('encargado/AsignarTareaPasantes',$data,$lastId);
 		$this->load->view('footer');
 
 	}
