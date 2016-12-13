@@ -10,6 +10,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <title>Horario Pasante</title>
     <link rel="stylesheet" href="<?php echo base_url();?>bootstrap/css/bootstrap.min.css">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+function searchName(){
+    xmlhttp= new XMLHttpRequest();
+    xmlhttp.open("GET", "Horarios/search_name?name="+document.form1.fname.value,false);
+    xmlhttp.send(null);
+    document.getElementById("search_table").innerHTML=xmlhttp.responseText;
+}
+$(document).ready(function(e) {
+            $.ajaxSetup({cache:false});
+            $('#search_table').load('Horarios/display_info');
+        });
+</script>
    <script type="text/javascript">
 function confirma(){
     if (confirm("¿Realmente desea eliminarlo?")){ 
@@ -55,7 +68,7 @@ function confirma(){
                                 </div>
                                 <div class="form-group">
                                    
-                                    <input type="text" name="hora_inicio" class="form-control" placeholder="Ingrese hora de inicio"/>
+                                    <input type="time" name="hora_inicio" class="form-control" placeholder="Ingrese hora de inicio"/>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" name="hora_fin" class="form-control" placeholder="Ingrese hora fin"/>
@@ -78,64 +91,40 @@ function confirma(){
 
         <br />
         <br />
-        <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>PASANTE</th>
-                   
-                    <th>DIA</th>
-                    <th> HORA INICIO</th>
-                    <th>HORA FIN</th>
-                    <th colspan="2">OPCION</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
+        <div class="form-group">
+        
             <?php
-foreach($ver as $fila){
-?>
-    <tr>
-        <td>
-            <?=$fila->pasante;?>
-        </td>
-        <td>
-            <?=$fila->dia;?>
-        </td>
-        <td>
-            <?=$fila->hora_inicio;?>
-        </td>
-        <td>
-            <?=$fila->hora_fin;?>
-        </td>
-        <td>
- 
-            <a onclick="if(confirma() == false) return false" href="<?php echo base_url();?>index.php/Horarios/delete/<?=$fila->id?>">Eliminar</a></td>
+                $name = array('id' => 'my_form', 'name' => 'form1');
+                echo form_open('Horario/search_name', $name);
+            ?>
             
-        </td>
-       <td>
-            
+            <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <strong>
+            <?php
+                echo "Buscar por dia: </br> </br>";
+
+                echo form_input('fname', set_value('fname'),'onkeyup="searchName();"');
+            ?></strong>
+            <br />
+        <br />
            
-            <a href="<?php echo base_url();?>index.php/Horarios/update">Actualizar</a></td>
-        </td>
-    </tr>
-            </tbody>
 
-         <?php
-    
-}
-?>  
-        </table>
+            </table>
+           <?php echo form_close(); ?>
+            <div id="search_table"></div>
+        </div>
+    </div> 
+       
+
+</div>
+
     </div>
-
                         </div>
                         <hr>
-                    
-
-                    </div>
+                                        </div>
 
                 </div>
-                
-
+                 
             </div>
 
         </section>

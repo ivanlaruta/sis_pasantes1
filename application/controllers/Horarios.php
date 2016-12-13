@@ -54,8 +54,42 @@ class horarios extends CI_Controller {
 		}
 	}
 
-	
+		public function editform($id)
+   {
 
+   $this->load->model('modelohorario');
+   $data["user"]=$this->modelohorario->getDataByID($id);
+  
+   }
+   public function edit_data()
+  {
+  $id=$this->input->post['id'];
+  $data['pasante']=$this->input->post('Pasante');
+  $data['dia']=$this->input->post('Dia');
+   $data['hora_inicio']=$this->input->post('Hora Inicio');
+    $data['hora_fin']=$this->input->post('Hora Fin');
+  echo $id.",".$data['pasante'].",". $data['dia'].",". $data['hora_incio'].",". $data['hora_fin'];
+  $this->db->where('id',$id);
+  $this->db->update('horario',$data);  
+  redirect('horarios');
+  } 
+function display_info(){
+		$this->load->model('modelohorario');
+		
+		$data['results'] = $this->modelohorario->get_info();
+		
+		$this->load->view('pasante/view_info', $data);
+	}
+	function search_name(){
+		if(isset($_GET['name'])){
+			$name=$_GET['name'];
+		}
+		$this->load->model('modelohorario');
+		
+		$data['results'] = $this->modelohorario->searchbyname($name);
+		
+		$this->load->view('pasante/view_info', $data);
+	}
 	
 }
 

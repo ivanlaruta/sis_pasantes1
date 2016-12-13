@@ -42,18 +42,12 @@ $(document).ready(function(e) {
                 echo form_open('controlAsignacionHorario/search_name', $name);
             ?>
             <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
-            <?php
+           <strong> <?php
                 echo "Buscar por pasante: </br> </br>";
 
                 echo form_input('fname', set_value('fname'),'onkeyup="searchName();"');
             ?>
-                    <tr>
-                        <th width="175">Pasante</th>
-                        <th width="175">Dia</th>
-                        <th width="226">Hora Inicio</th>
-                         <th width="226">Hora Fin</th>
-                    </tr>
-
+               </strong>     
             </table>
            <?php echo form_close(); ?>
             <div id="search_table"></div>

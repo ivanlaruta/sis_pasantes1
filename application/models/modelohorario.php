@@ -30,11 +30,29 @@ class modelohorario extends CI_Model {
         return $consulta->result();
     }
     
-        
-	
-
+    
 	 function delete($id){
 		$this->db->where('id',$id);
 		return $this->db->delete('horario');
 	}
+	function obtener($id) {
+        $this->db->where('id', $id);
+        $query = $this->db->get('horario');
+        $fila = $query->row();
+        return $fila;
+    }
+ 
+	  public function getDataByID($id)
+ { 
+ $query=$this->db->get_where('horario',array('id'=>$id));
+ return $query->row_array();
+ }
+ function get_info(){
+        $query = $this->db->query("SELECT * FROM horario");
+        return $query->result();
+    }
+    function searchbyname($name){
+        $query = $this->db->query("SELECT * FROM horario WHERE dia LIKE ('$name%')");
+        return $query->result();
+    }
 }
