@@ -1,6 +1,6 @@
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>	
 	 	
-	<form action="<?php echo base_url();?>index.php/cPast" method="POST">
+	<form action="<?php echo base_url();?>index.php/cPast/guardar" method="POST">
 		
 		<div align="center">
 			<table border="0">
@@ -40,7 +40,7 @@
                                                 </td>
                                                 <td>
 
-                                                	<input type="checkbox" value="<?php  echo $row->id_persona ?>" name="ids[]" /></label><br/>
+                                                	<input type="checkbox" value="<?php  echo $row->id_pasante ?>" name="ids[]" /></label><br/>
 
                                                 </td>
 

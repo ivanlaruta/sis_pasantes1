@@ -25,17 +25,19 @@
 			</tr>
 
 			<tr>
-				<td height="60"><a href="<?php echo base_url();?>index.php/controlModificarPasante" class="btn btn-primary" style='width:170px'>Modificaciones</a></td>
-				<td>&nbsp;Modificar datos de pasante</td>
+				<td height="60"><a href="<?php echo base_url();?>index.php/RegistroTareaPasante" class="btn btn-primary" style='width:170px'>Registro de Tareas </a> </td> 
+				<td>&nbsp;Registrar tareas  y asignarlas a pasantes</td>
+			</tr>
+
+			<tr>
+				<td height="60"><a href="<?php echo base_url();?>index.php/cListarTareas" class="btn btn-primary" style='width:170px'>Listar tareas</a></td>
+				<td>&nbsp;lista todsa las tareas asignadas a pasantes.</td>
 			</tr>
 			<tr>
 				<td height="60"><a href="<?php echo base_url();?>index.php/controlEliminarPasante" class="btn btn-primary" style='width:170px'>Borrar</a></td>
 				<td>&nbsp;Eliminar pasante</td>
 			</tr>
-			<tr>
-				<td height="60"><a href="<?php echo base_url();?>index.php/RegistroTareaPasante" class="btn btn-primary" style='width:170px'>Registro de Tareas </a> </td> 
-				<td>&nbsp;Registrar tareas  y asignarlas a pasantes</td>
-			</tr>
+			
 			<tr>
 				<td height="60"><a href="<?php echo base_url();?>index.php/controlAsignacionHorario" class="btn btn-primary" style='width:170px'>Registro de horarios</a></td>
 				<td>	
