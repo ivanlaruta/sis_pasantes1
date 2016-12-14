@@ -14,16 +14,16 @@
 
 <?php
 
-foreach ($consulta->result() as $fila) {  ?>
+foreach ($resultado as $row) {  ?>
     
 
  <tr>
-    <td><?= $fila->fecha;?></td>
-    <td><?= $fila->cat_estado_per;?></td>
-    <td><?= $fila->cat_carrera;?></td>
-    <td><?= $fila->nombres;?></td>
-    <td><?= $fila->apellidos;?></td>
-    <td><a href="<?php echo base_url(); ?>index.php/versolicitud" class="btn btn-primary" >Ver Solicitud</td>
+    <td><?php echo $row->fecha;?></td>
+    <td><?php echo $row->cat_estado_per;?></td>
+    <td><?php echo $row->cat_carrera;?></td>
+    <td><?php echo $row->nombres;?></td>
+    <td><?php echo $row->apellidos;?></td>
+    <td><a href="<?php echo base_url(); ?>index.php/versolicitud2" class="btn btn-primary" >Ver Solicitud</td>
 
  </tr>
 
@@ -33,6 +33,9 @@ foreach ($consulta->result() as $fila) {  ?>
 
 
 ?>
+
+
+
 
 </table>
 

@@ -20,6 +20,10 @@ class Pendientes extends CI_Controller
 		$this->load->view('encargado/pendientes',$data);
 		$this->load->view('footer');
 	}
+
+
+
+
 	
 	
 }
