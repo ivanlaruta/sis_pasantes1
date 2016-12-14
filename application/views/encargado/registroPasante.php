@@ -1,6 +1,6 @@
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>
 <div class="error">
-	<?php echo validation_errors(); ?>
+	<!--<?php echo validation_errors(); ?>-->
 </div>
 	 	
 	<form action="<?php echo base_url();?>index.php/registroPasante/validar" method="POST">
@@ -62,6 +62,7 @@
 					
 				</tr>
 
+				
 				<!--<tr>
 					<td><label for="password2">Confirmar Password</label></td>
 					<td><input type="password" class="form-control" id="password2" name="password2" placeholder="Confirmar Contraseña" value="<?php echo set_value('password2');?>"></td>

@@ -19,7 +19,7 @@ public function getPost(){
 public function getPostByName($name='')
 {
 
-$this->db->query("SELECT * FROM permiso  WHERE id_permiso='1',$name");
+$this->db->query("SELECT * FROM permiso  WHERE id_permiso=>'1',$name");
 
 
 
