@@ -6,7 +6,7 @@ class controlListaTareaFinalizada extends CI_Controller {
 	function __construct()
 	{
 		parent:: __construct();
-		$this ->load->model('mPasante');
+		$this ->load->model('modeloTareaPenPasante');
 	}
 	//public function index()
 	//{
@@ -31,9 +31,9 @@ class controlListaTareaFinalizada extends CI_Controller {
 		//print_r($session_data);
 		//$ide = $this->session->userdata('idusuario');
 		//echo $ide;
-		$this ->load->model('mPasante');
+		$this ->load->model('modeloTareaPenPasante');
 		$data = array();
-		$data["listarTareas"] = $this -> mPasante -> listarTareas3($session_data);
+		$data["listarTareas"] = $this -> modeloTareaPenPasante -> listarTareas3($session_data);
 
 
 		$this->load->view('header');
