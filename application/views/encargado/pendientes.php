@@ -2,48 +2,41 @@
 
 <div align="center" class="container">
 
-<table border="1" class="table table-bordered">
-<thead>
-<tr>
-<td colspan="4">
-<center><legend>Solicitudes Pendientes</legend></center>
-</td>
+<table border="2">
+    
+    <tr>
+        <th>Fecha</th>
+        <th>Estado</th>
+        <th>Carrera</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+    </tr>
 
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Pasante</td>
-<td>Fecha de Envio de Solicitud</td>
-<td>Estado</td>
-<td>Acciones</td>
+<?php
+
+foreach ($consulta->result() as $fila) {  ?>
+    
+
+ <tr>
+    <td><?= $fila->fecha;?></td>
+    <td><?= $fila->cat_estado_per;?></td>
+    <td><?= $fila->cat_carrera;?></td>
+    <td><?= $fila->nombres;?></td>
+    <td><?= $fila->apellidos;?></td>
+    <td><a href="" type="btn btn-primary">Ver Solicitud</td>
+
+ </tr>
+
+ <?php
+
+}
 
 
-</tr>
+?>
 
-<?php  foreach ($resultado as $row) { ?>
-                                            <tr> 
-                                            	<td>
-                                            	<?php echo $row->cat_tipo_permiso;?>
-                                            	</td>
-                                               
-                                                <td>
-                                            	<?php echo $row->cat_estado_per;?>
-                                            	</td>
-                                            	<td>
-                                            	<?php echo $row->fecha;?>
-                                            	</td>
-                                            	<td>
-                                            	<?php echo $row->descripcion;?>
-                                            	</td>
-                                            	</tr>
-                                            <?php
-                                       
-                                    }
-                                ?> 
-
-</tbody>
 </table>
+
+
 
 </div>
 </body>
