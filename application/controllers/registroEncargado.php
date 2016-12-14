@@ -93,8 +93,15 @@ class RegistroEncargado extends CI_Controller
 	);
 
 		$this->form_validation->set_error_delimiters('<div style="color:Red">','</div>');
+		$this->form_validation->set_message('required', 'El campo %s es obligatorio');
+		$this->form_validation->set_message('integer', 'El campo %s deve poseer solo numeros enteros');
+		$this->form_validation->set_message('is_unique', 'El campo %s ya esta registrado');
+		$this->form_validation->set_message('required', 'El campo %s es obligatorio');
+		$this->form_validation->set_message('max_length', 'El Campo %s debe tener un Maximo de %d Caracteres');
+
 
 		$this->form_validation->set_rules($rules);
+				
 
 
 

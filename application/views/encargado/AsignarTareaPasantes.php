@@ -1,5 +1,10 @@
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>
 
+
+
+
+
+
 <div align="center">
 <br>
  	<h4>lista pasantes:</h4>

@@ -18,10 +18,10 @@
 					<td>.</td>							
 				</tr>
 
-				<tr>
+				<!--<tr>
 					<td><label>Pasante asignado</label></td>
 					<td><input type="text" class="form-control" name="nombres" maxlength="8" ></td>
-				</tr>
+				</tr>-->
 
 				<tr>
 					<td>.</td>							
@@ -29,7 +29,7 @@
 
 				<tr>
 					<td><label>Fecha inicio:</label></td>
-					<td><input type="text" class="form-control" name="fecha_inicio" maxlength="8" ></td>
+					<td><input type="text" class="form-control" name="fecha_inicio"></td>
 				</tr>
 
 				<tr>
@@ -38,7 +38,7 @@
 
 				<tr>
 					<td><label>C.I.</label></td>
-					<td><input type="text" class="form-control" name="carnet_identidad" maxlength="8" placeholder="4833296"></td>
+					<td><input type="text" class="form-control" name="carnet_identidad"></td>
 				</tr>
 
 				<tr>
@@ -60,6 +60,28 @@
 					<td><p><input type="textarea" class="form-control" name = "descripcion" placeholder="Ingresa alguna observacion que tuviste en esta tarea" style="height: 100px;width: 450px"></textarea></p></td>
 				
 				</tr>
+
+				<tr>
+					<td><p><label>Estado:</label></p></td>
+					<td>
+                     <select name="cat_carrera" value="<?php echo set_value('cat_carrera');?>">
+                                <?php 
+                                    
+                                    foreach ($resultado as $row) {
+                                        
+                                            ?>
+                                            <option  value=<?php echo $row->key;?> >
+                                            	<?php echo $row->key;?>
+                                            </option>
+                                            <?php
+                                       
+                                    }
+                                ?>
+                      </select><?php echo form_error('cat_carrera'); ?>
+						</td>
+						
+				</tr>
+
 			</table>
 		</div>
 

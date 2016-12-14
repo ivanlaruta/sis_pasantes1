@@ -1,6 +1,7 @@
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>	
 	 	
 	<form action="<?php echo base_url();?>index.php/RegistroTareaPasante/guardar" method="POST">
+	<input type="hidden" name="encargado"  value="<?php echo $this->session->userdata('idusuario');?>"  />
 		<div align="center">
 			<table border="0">
 				<tr>

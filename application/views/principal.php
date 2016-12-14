@@ -50,13 +50,24 @@
 
 		<div class="col-xs-8 col-sm-3">
 			<div align="center">
-				<h2>Unidad Académica</h2>
-				<h2>"La Paz"</h2>
+				<table border="0" width="350">
+				<tr>
+				<td>
+				<img src="<?php echo base_url(); ?>images/escudo.jpg" width="100" height="120">
+				
+				</td>
+				<td align="center">
+				<h3><b><font face="Verdana">Universidad Católica Boliviana "San Pablo"</font></b></h3>
+				</td>
+				</tr>
+				</table>
+				
 				<br>
 				<br>
 				<br>
+				<div align="center">
 				<form class ="login-card" action="" method="POST">
-					<legend>Sistema de Control de Pasantes</legend>
+					<legend><center>Sistema de Control de Pasantes</center></legend>
 					<table border="0">
 					<tr>
 					
@@ -89,7 +100,7 @@
 					</tr>
 					</table>
 				</form>
-				
+				</div>
 					<br>
 					<br>
 

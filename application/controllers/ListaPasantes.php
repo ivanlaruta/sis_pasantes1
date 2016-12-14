@@ -8,8 +8,8 @@ class ListaPasantes extends CI_Controller
 	{
 		parent:: __construct();
 
-		$this -> load -> model('mTarea');
-		$this -> load -> model('mPasante');
+		$this ->load-> model('mTarea');
+		$this ->load-> model('mPasante');
 		//$this -> load -> model('registrarPasante');
 		$this -> load->library('encrypt');
 	
@@ -21,7 +21,7 @@ class ListaPasantes extends CI_Controller
 	$datos['resultado'] = $this->mPasante->listarPasantes();
     
 		$this->load->view('header');
-		$this -> load-> view ('encargado/listaPasantes', $datos);
+		$this ->load->view ('encargado/listaPasantes', $datos);
 		$this->load->view('footer');
 	}
 
