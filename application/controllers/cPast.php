@@ -39,7 +39,7 @@ class cPast extends CI_Controller
                 $param['id_pasante'] = $value;
                 $param['id_actividad'] =$_POST['idtarea'];
                 $param['fecha'] =date('Y-m-d'); 
-                $param['cat_estado_act'] ="PENDIENTE";
+                $param['cat_estado_act'] ="PEN";
                 $param['id_encargado'] = 1;
                
                
