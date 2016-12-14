@@ -13,7 +13,6 @@ class Pendientes extends CI_Controller
 {
 	
 	public function index(){
-
 	
 		$result=$this->db->get('permiso','persona','pasante');
 		$data=array('consulta'=>$result);
@@ -21,7 +20,6 @@ class Pendientes extends CI_Controller
 		$this->load->view('encargado/pendientes',$data);
 		$this->load->view('footer');
 	}
-
 	
 	
 }

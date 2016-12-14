@@ -14,7 +14,7 @@
 				<thead>
 					<th>Numero</th>
 					<th>Actividad</th>
-					<th>Fecha inicio</th>
+					<th>Fecha</th>
 					<th>Editar</th>
 				</thead>
 
@@ -24,18 +24,15 @@
 					{
 						foreach ($listarTareas as $up ) 
 						{
-						?>
-						
-						<tr>
-							<td><?php echo $up -> id_actividad ?></td>
-							<td><?php echo $up -> actividad ?></td>
-							<td><?php echo $up -> fecha_inicio ?></td>
-							<td><a href="<?php echo base_url();?>index.php/controlIngresarEstadoPasante" class="btn btn-primary" style='width:160px'>Editar</a></td>
+							?>
 							
-					<br>
-				</td>
-						</tr>
-						<?php
+							<tr>
+								<td><?php echo $up -> id_actividad ?></td>
+								<td><?php echo $up -> actividad ?></td>
+								<td><?php echo $up -> fecha ?></td>
+								<td><a href="<?php echo base_url();?>index.php/controlIngresarEstadoPasante" class="btn btn-primary" style='width:160px'>Editar</a></td>								
+							</tr>
+							<?php
 						}
 					}
 
