@@ -2,8 +2,8 @@
 
 <div align="center" class="container">
 
-<table border="2">
-    
+<table border="2" class="table table-bordered">
+    <legend>Solicitudes Pendientes</legend>
     <tr>
         <th>Fecha</th>
         <th>Estado</th>
@@ -23,7 +23,7 @@ foreach ($consulta->result() as $fila) {  ?>
     <td><?= $fila->cat_carrera;?></td>
     <td><?= $fila->nombres;?></td>
     <td><?= $fila->apellidos;?></td>
-    <td><a href="" type="btn btn-primary">Ver Solicitud</td>
+    <td><a href="<?php echo base_url(); ?>index.php/versolicitud" class="btn btn-primary" >Ver Solicitud</td>
 
  </tr>
 
