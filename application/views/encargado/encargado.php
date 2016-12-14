@@ -1,5 +1,4 @@
 
-
 <body background="<?php echo base_url(); ?>images/fondo2.jpg" style='background-attachment: fixed;'>
 
 
@@ -67,7 +66,7 @@
 
 			<tr>
 				<td height="60">
-					<a href="<?php echo base_url(); ?>index.php/pendientes/listar" class="btn btn-primary" style='width:170px'>Solicitudes Pendientes</a>
+					<a href="<?php echo base_url(); ?>index.php/pendientes2" class="btn btn-primary" style='width:170px'>Solicitudes Pendientes</a>
 				</td>
 
 				<td>
