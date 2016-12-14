@@ -23,7 +23,7 @@ class horarios extends CI_Controller {
 
 	//controlador para añadir
     public function add(){
-         
+           $param['id_pasante'] = $this -> input -> post('id_pasante');
         $param['pasante'] = $this -> input -> post('pasante');
 		$param['dia'] =$this -> input -> post('dia');
 		$param['hora_inicio'] =$this -> input -> post('hora_inicio');

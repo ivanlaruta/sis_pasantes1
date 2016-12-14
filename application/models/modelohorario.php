@@ -13,6 +13,7 @@ class modelohorario extends CI_Model {
 	function nuevo_horario($param)
     {
        $campos = array(
+        'id_pasante' =>$param['id_pasante'] ,
 			'pasante' =>$param['pasante'] ,
 			'dia' =>$param['dia'] , 
 			'hora_inicio' =>$param['hora_inicio'] ,

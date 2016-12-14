@@ -71,9 +71,12 @@ function confirma(){
                                     <input type="time" name="hora_inicio" class="form-control" placeholder="Ingrese hora de inicio"/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="hora_fin" class="form-control" placeholder="Ingrese hora fin"/>
+                                    <input type="time" name="hora_fin" class="form-control" placeholder="Ingrese hora fin"/>
                                 </div>
-                                
+                                <div class="form-group">
+                                   
+                                    <input type="int" name="id_pasante" class="form-control" placeholder="Id pasante"/>
+                                </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary btn-block" value="Registrar">Registrar</button>
                                 </div>
