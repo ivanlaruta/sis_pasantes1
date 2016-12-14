@@ -24,8 +24,8 @@ public function getPostByName($cat_carrera,$nombres,$apellidos)
 
 		$this->db->select('f.fecha,f.cat_estado_per, c.cat_carrera, n.nombres,n.apellidos');
 		$this->db->from('permiso f');
-		$this->db->join('pasante c','f.id_pasante=c.id_pasante');
-		$this->db->join('persona n','n.id_persona=c.id_persona');
+		$this->db->join('pasante c','f.id_pasante=c.id_pasante','inner');
+		$this->db->join('persona n','n.id_persona=c.id_persona','inner');
 		$this->db->where('c.cat_carrera',$cat_carrera);
 		$this->db->where('n.nombres',$nombres);
 		$this->db->where('n.apellidos',$apellidos);
