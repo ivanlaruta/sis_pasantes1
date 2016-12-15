@@ -57,15 +57,23 @@ class modeloTareaPenPasante extends CI_Model
 	}
 
 	public function editar(){
-		$sql = "select p.id_pasante, ap.id_actividad, ap.fecha_inicio, ap.id_encargado, a.actividad
-			from (pasante p
-			inner join actividad_pasante ap
-			on p.id_pasante = ap.id_pasante)
-			inner join actividad a
-			on ap.id_actividad = ?";
-		$sql = $this->db->query($sql, $_GET('a.id_actividad'));
-		return $sql->result();
+		$sql = "select ap.id_actividad_pasante, pe.nombres, pe.carnet_identidad, ap.fecha, ap.cat_estado_act, a.actividad, ap.id_encargado
+			from actividad a, actividad_pasante ap, pasante pa, persona pe
+			where pa.id_persona = pe.id_persona
+			and ap.id_pasante = pa.id_pasante
+			and ap.id_actividad = a.id_actividad
+			and a.id_actividad = ?";
+		
+        $sql = $this->db->query($sql, $_GET['id_actividad']);
+        return $sql->result();
+	}
 
+	public function actualizar(){
+		$data = array(
+			'fecha' => $_POST['fecha'],
+			'cat_estado_act' => $_POST['cat_estado_act']);
+		$this->db->where('id_actividad_pasante', $_POST['id_actividad_pasante']);
+		$this->db->update('actividad_pasante',$data);
 	}
 
 }

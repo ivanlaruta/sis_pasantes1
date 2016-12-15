@@ -14,8 +14,8 @@
 				<thead>
 					<th>Numero</th>
 					<th>Actividad</th>
-					<th>Fecha inicio</th>
-					<th>Editar</th>
+					<th>Fecha</th>
+					<th>Estado</th>
 				</thead>
 
 				<tbody>
@@ -29,8 +29,8 @@
 						<tr>
 							<td><?php echo $up -> id_actividad ?></td>
 							<td><?php echo $up -> actividad ?></td>
-							<td><?php echo $up -> fecha_inicio ?></td>
-							<td><a href="<?php echo base_url();?>index.php/controlIngresarEstadoPasante" class="btn btn-primary" style='width:160px'>Editar</a></td>
+							<td><?php echo $up -> fecha ?></td>
+							<td><?php echo $up -> cat_estado_act ?></td>
 							
 					<br>
 				</td>

@@ -41,9 +41,5 @@ class controlListaTareaPasante extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	#public function editar(){
-	#	$this->load->model('modeloTareaPenPasante');
-	#	$data['registro']=$this->modeloTareaPenPasante->editar();
-	#	$this->load->view('pasante/controlIngresarEstadoPasante', $data);
-	#}
+	
 }

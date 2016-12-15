@@ -17,7 +17,7 @@
 					<th>Fecha</th>
 					<th>Estado</th>
 					<th>Encargado</th>
-					
+					<th>Editar</th>					
 					
 				</thead>
 
@@ -35,7 +35,7 @@
 							<td><?php echo $up -> fecha ?></td>
 							<td><?php echo $up -> cat_estado_act ?></td>
 							<td><?php echo $up -> id_encargado ?></td>
-							<!--<td><a href="<?php echo base_url();?>index.php/controlIngresarEstadoPasante" class="btn btn-primary" style='width:160px'>Editar</a></td>-->
+							<td><a href="<?php echo base_url('index.php/controlIngresarEstadoPasante/editar').'?id_actividad='.$up->id_actividad;?>" class="btn btn-primary" style='width:160px'>Editar</a></td>
 							
 					<br>
 				</td>

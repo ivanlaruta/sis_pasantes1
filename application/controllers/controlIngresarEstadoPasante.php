@@ -11,4 +11,20 @@ class controlIngresarEstadoPasante extends CI_Controller {
 		$this->load->view('footer');
 
 	}
+
+	public function editar(){
+		$this->load->model('modeloTareaPenPasante');
+		$data['registros']=$this->modeloTareaPenPasante->editar();
+		$this->load->view('header');
+		$this->load->view('pasante/ingresarEstadoTarea', $data);
+		$this->load->view('footer');
+	}
+
+	public function actualizar(){
+		$this->load->model('modeloTareaPenPasante');
+		$this->modeloTareaPenPasante->actualizar();
+		$this->load->view('header');
+		$this->load->view('pasante/pasante');
+		$this->load->view('footer');
+	}
 }
