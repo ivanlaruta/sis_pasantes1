@@ -25,7 +25,7 @@
 				</td>
 
 				<td>
-					Lista de tareas finalizadas
+					historial de tareas
 				</td>
 			</tr>
 
