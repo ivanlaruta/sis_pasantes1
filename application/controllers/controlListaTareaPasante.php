@@ -32,6 +32,7 @@ class controlListaTareaPasante extends CI_Controller {
 		//$ide = $this->session->userdata('idusuario');
 		//echo $ide;
 		//$this ->load->model('modeloTareaPenPasante');
+		
 		$data = array();
 		$data["listarTareas"] = $this -> modeloTareaPenPasante -> listarTareas3($session_data);
 

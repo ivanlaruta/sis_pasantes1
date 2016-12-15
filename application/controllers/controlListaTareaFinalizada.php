@@ -33,7 +33,7 @@ class controlListaTareaFinalizada extends CI_Controller {
 		//echo $ide;
 		$this ->load->model('modeloTareaPenPasante');
 		$data = array();
-		$data["listarTareas"] = $this -> modeloTareaPenPasante -> listarTareas3($session_data);
+		$data["listarTareas"] = $this -> modeloTareaPenPasante -> listarTareasFinalizadas($session_data);
 
 
 		$this->load->view('header');
