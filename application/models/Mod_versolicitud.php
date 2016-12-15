@@ -21,7 +21,7 @@ public function getPostByName()
 
 
 
-		$this->db->select('f.fecha,f.cat_estado_per, c.cat_carrera, n.nombres,n.apellidos');
+		$this->db->select('f.fecha,f.cat_estado_per, c.cat_carrera, n.nombres,n.apellidos,');
 		$this->db->from('permiso f');
 		$this->db->join('pasante c','f.id_pasante=c.id_pasante','inner');
 		$this->db->join('persona n','n.id_persona=c.id_persona','inner');
@@ -63,7 +63,7 @@ public function listarSolicitudes2 ($id_permiso)
 	}
 
 	public function editar(){
-		$sql = "select f.id_permiso, f.fecha,f.cat_estado_per, c.cat_carrera, n.nombres,n.apellidos, f.descripcion
+		$sql = "select f.id_permiso, f.fecha,f.cat_estado_per, c.cat_carrera, n.nombres,n.apellidos, f.descripcion, f.fecha_permiso
 			from permiso f, pasante c,persona n
 			where c.id_persona=n.id_persona
 			and c.id_pasante=f.id_pasante

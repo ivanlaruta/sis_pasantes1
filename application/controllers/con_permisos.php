@@ -29,22 +29,24 @@ class Con_permisos extends CI_Controller
 public function enviar()
 		{
 			// para id pasante
-			$id=$this->input->post('usuario');
-
+			$id=  $this->session->userdata('idusuario');
 			$datos['id_pasante'] = $this->mPasante->getIdPasante($id);
-
-            $aa = $datos['id_pasante'][0];
-			//echo "hola entre al metodo guardar";
+			$idpasante= $datos['id_pasante'][0]->id_pasante ;
+ 			
+			//
 			$param['fecha_permiso'] = $this->input->post('fechasol');
 			$param['descripcion'] = $this->input->post('solicitud');
 			$param['cat_estado_per'] =$this->input->post('estado');
 			$param['fecha']=$this->input->post('fechaactual');
-			$param['id_pasante']=$aa;
-
+			$param['id_pasante']=$idpasante;
 
 			$this->mod_permiso->enviar($param);
 
 			echo'<script language="javascript">alert("Solicitud Enviada");</script>';	
+
+			$this->load->view('headerPrincipal');
+		$this->load->view('pasante/pasante');
+		$this->load->view('footer');
 
 		}	
 

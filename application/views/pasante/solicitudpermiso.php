@@ -22,6 +22,10 @@
  		</tr>
 
  		<tr>
+ 			<td><label>id pasante:</label></td>
+ 			<td><input type="text" name="pasante"></td>
+ 		</tr>
+ 		<tr>
  			<td><label>Fecha para la Solicitud:</label></td>
  			<td><input type="date" name="fechasol"></td>
  		</tr>

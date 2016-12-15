@@ -53,6 +53,8 @@ and   ac.id_actividad = acp.id_actividad*/
 	}
 	public function listarFin ()
 	{
+
+		
 /*select pe.nombres,pe.apellidos, ac.actividad,acp.fecha,acp.cat_estado_act,en.nombres,en.apellidos
 from persona pe, persona en, actividad ac, actividad_pasante acp, pasante pa , encargado enc
 where pe.id_persona = pa.id_persona

@@ -25,8 +25,8 @@ foreach ($consulta as $fila) {
 				</tr>
 
 				<tr>
-					<td><label>Fecha inicio:</label></td>
-					<td><input type="text" class="form-control" name="fecha" value="<?php echo $fila->fecha?>" readonly="readonly"></td>
+					<td><label>Fecha solicitda:</label></td>
+					<td><input type="text" class="form-control" name="fecha" value="<?php echo $fila->fecha_permiso?>" readonly="readonly"></td>
 				</tr>
 
 
@@ -62,8 +62,8 @@ foreach ($consulta as $fila) {
 		</div>
 
 		<div align="center">
-			<input type="submit" value="Guardar" class="btn btn-primary" style='width:120px'>
-			<a href="<?php echo base_url();?>index.php/ControlPasantes" class="btn btn-primary"  style='width:120px'>Cancelar</a>
+			
+			<a href="<?php echo base_url();?>index.php/encargado" class="btn btn-primary"  style='width:120px'>Cancelar</a>
 		</div>	
 	</form>
 
