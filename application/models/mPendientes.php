@@ -49,7 +49,7 @@ return $result->row();
 
 public function listarSolicitudes ()
 	{
-		$this->db->select('f.fecha,f.cat_estado_per, c.cat_carrera, n.nombres,n.apellidos');
+		$this->db->select('f.id_permiso, f.fecha,f.cat_estado_per, c.cat_carrera, n.nombres,n.apellidos');
 		$this->db->from('permiso f, pasante c,persona n');
 		$this->db->where('c.id_persona=n.id_persona');
 		$this->db->where('c.id_pasante=f.id_pasante');		

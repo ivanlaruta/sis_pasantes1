@@ -49,7 +49,7 @@ return $result->row();
 
 public function listarSolicitudes2 ($id_permiso)
 	{
-		$this->db->select('f.fecha,f.cat_estado_per, c.cat_carrera, n.nombres,n.apellidos');
+		$this->db->select('f.id_permiso, f.fecha,f.cat_estado_per, c.cat_carrera, n.nombres,n.apellidos');
 		$this->db->from('permiso f, pasante c,persona n');
 		$this->db->where('c.id_persona=n.id_persona');
 		$this->db->where('c.id_pasante=f.id_pasante');		
@@ -61,6 +61,18 @@ public function listarSolicitudes2 ($id_permiso)
 			 return $resultado -> result();
 		}
 	}
+
+	public function editar(){
+		$sql = "select f.id_permiso, f.fecha,f.cat_estado_per, c.cat_carrera, n.nombres,n.apellidos, f.descripcion
+			from permiso f, pasante c,persona n
+			where c.id_persona=n.id_persona
+			and c.id_pasante=f.id_pasante
+			and f.id_permiso = ?";
+		
+        $sql = $this->db->query($sql, $_GET['id_permiso']);
+        return $sql->result();
+	}
+
 
 
 
