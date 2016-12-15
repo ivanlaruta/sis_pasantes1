@@ -35,7 +35,7 @@
 
 			<tr>
 				<td height="60">
-					<a href="" class="btn btn-primary" style='width:170px'>Reporte de Tareas</a>
+					<a href="<?php echo base_url();?>index.php/controlTareas" class="btn btn-primary" style='width:170px'>Reporte de Tareas</a>
 				</td>
 
 				<td>
