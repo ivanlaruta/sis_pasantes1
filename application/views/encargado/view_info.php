@@ -22,4 +22,7 @@
             </tr>
   
        <?php } ?>
-        </table>
+
+        </table><td height="60">
+                   <center> <a href="<?php echo base_url();?>index.php/nuevohorariocon" class="btn btn-primary" class="btn btn-primary" style='width:170px'> ASIGNAR HORARIO </a></center>
+                </td>

@@ -6,6 +6,7 @@
                         <td colspan="1">Hora Inicio</td>
                          <td colspan="1">Hora Fin</td>
                           <td colspan="3">Opcion</td>
+
                     </tr>
             </thead>
     	<?php
@@ -27,8 +28,9 @@
         <a onclick="if(confirma() == false) return false" href="<?php echo base_url();?>index.php/Horarios/delete/<?=$row->id?>"> Eliminar</a></td>
             
         </td>
- <td><a href="<?php echo base_url();?> index.php/Horarios/editform/<?php echo $row->id;?>/">Edit</a></td>
+ <td><a href="<?php echo base_url();?>pasante/edit/<?=$row->id?>"></a>  </td>
             </tr></tbody>
   
        <?php } ?>
+      
         </table>

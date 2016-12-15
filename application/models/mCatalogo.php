@@ -28,7 +28,20 @@ class mCatalogo extends CI_Model
 		return FALSE;
 	}
 
+public function listarPasante ()
+	{
+		$this->db->select('nombres,apellidos');
+		$this->db->from('persona');
+		$this->db->where('persona.id_rol','3');	
+				
 
+		$resultado = $this->db->get();
+		
+		if ($resultado->num_rows()>0) {
+			return $resultado -> result();
+		}
+		return FALSE;
+	}
 }
 
 ?>

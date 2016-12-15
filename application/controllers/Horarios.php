@@ -54,25 +54,7 @@ class horarios extends CI_Controller {
 		}
 	}
 
-		public function editform($id)
-   {
-
-   $this->load->model('modelohorario');
-   $data["user"]=$this->modelohorario->getDataByID($id);
-  
-   }
-   public function edit_data()
-  {
-  $id=$this->input->post['id'];
-  $data['pasante']=$this->input->post('Pasante');
-  $data['dia']=$this->input->post('Dia');
-   $data['hora_inicio']=$this->input->post('Hora Inicio');
-    $data['hora_fin']=$this->input->post('Hora Fin');
-  echo $id.",".$data['pasante'].",". $data['dia'].",". $data['hora_incio'].",". $data['hora_fin'];
-  $this->db->where('id',$id);
-  $this->db->update('horario',$data);  
-  redirect('horarios');
-  } 
+		
 function display_info(){
 		$this->load->model('modelohorario');
 		
@@ -90,6 +72,38 @@ function display_info(){
 		
 		$this->load->view('pasante/view_info', $data);
 	}
-	
+
+    public function edit()
+    {
+        $id = $this->uri->segment(3);
+        {
+            show_404();
+        }
+        
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+        
+        $data['title'] = 'Edit a news item';        
+        $data['news_item'] = $this->modelohorario->get_news_by_id($id);
+        
+        $this->form_validation->set_rules('pasante', 'pasante', 'required');
+        $this->form_validation->set_rules('dia', 'dia', 'required');
+ 
+        if ($this->form_validation->run() === FALSE)
+        {
+            $this->load->view('header');
+		$this->load->view('pasante/Horarios/edit',$data);
+		$this->load->view('footer');
+ 
+        }
+        else
+        {
+            $this->modelohorario->set_news($id);
+            //$this->load->view('news/success');
+            redirect('horarios');
+        }
+    }    
+
+	 
 }
 
