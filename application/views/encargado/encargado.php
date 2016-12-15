@@ -21,16 +21,7 @@
 				</td>
 			</tr>
 
-			<tr>	
-				<td height="60">
-					<a href="" class="btn btn-primary" style='width:170px'>Horarios</a>
-					<br>
-				</td>
-
-				<td>
-					Verificar Horarios
-				</td>
-			</tr>
+			
 
 			<tr>
 				<td height="60">
@@ -48,21 +39,13 @@
 				</td>
 
 				<td>
-					Enviar Solicitudes Especiales o de Permiso
+					ver estado de tareas
+
 				</td>
 
 			</tr>
 
-			<tr>
-				<td height="60">
-					<a href="<?php echo base_url(); ?>index.php/Observa" class="btn btn-primary" style='width:170px'>Observaciones</a>
-				</td>
-
-				<td>
-					Registrar Observaciones
-				</td>
-
-			</tr>
+			
 
 			<tr>
 				<td height="60">

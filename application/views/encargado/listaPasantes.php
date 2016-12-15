@@ -61,10 +61,10 @@
                                             	</td>
                                                 <td>
                                                 	<!--<input type="checkbox" name="id" value=<?php echo $row->id_persona;?> <br>-->
-                                                	<a href="" class="btn btn-primary"  style='width:120px'>Modificar</a>
+                                                	
                                                     <a href="" class="btn btn-primary"  style='width:120px'>Eliminar</a>
                                                 </td>
-                                            <tr>
+                                            <tr> 
                                             <?php
                                        
                                     }

@@ -51,6 +51,21 @@ class mPasante extends CI_Model
 		}
 	}
 
+	public function getIdPasante ($idusuario)
+	{
+		$this->db->select('pa.id_pasante');
+		$this->db->from('persona pe ,pasante pa');
+		$this->db->where('pe.id_persona = pa.id_persona');
+		$this->db->where('pe.id_persona', $idusuario);		
+
+		$resultado = $this->db->get();
+		
+		if ($resultado->num_rows()>0) {
+			 return $resultado -> result();
+		}
+		print_r($result);
+	}
+
 	public function mostrarDatos(){
 		$this->db->select('pe.*, pa.*');
 		$this->db->from('persona pe ,pasante pa');
