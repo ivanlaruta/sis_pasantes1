@@ -14,7 +14,7 @@
 				<thead>
 					<th>Numero</th>
 					<th>Nombre</th>
-					<th>Fecha de solicitud</th>
+					<th>Fecha de solicitud fhvsdafhvdashfgaiñsdbfguiñasdfguiñase</th>
 					<th>Fecha de permiso</th>
 					<th>Descripcion</th>
 					<th>Editar</th>
