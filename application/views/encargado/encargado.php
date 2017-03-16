@@ -17,7 +17,7 @@
 				</td>
 
 				<td>
-					Registro, Asignacion de Horarios y Tareas
+					Registro, Asignacion de Horarios y Tareas yalumnos
 				</td>
 			</tr>
 
